@@ -1,8 +1,8 @@
 import IconButton from "../common/IconButton";
 import { HeaderLayout, IconContainer } from "./styles";
-import Github from "../common/Icons/Github";
-import DarkTheme from "../common/Icons/DarkTheme";
-// import LightTheme from "../common/Icons/LitheTheme";
+import GithubIcon from "../common/Icons/GithubIcon";
+import DarkThemeIcon from "../common/Icons/DarkThemeIcon";
+// import LightThemeIcon from "../common/Icons/LightThemeIcon";
 
 import Logo from "../common/Logo/Logo";
 
@@ -13,14 +13,14 @@ const Header = () => {
 
       <IconContainer>
         <IconButton>
-          <Github />
+          <GithubIcon />
         </IconButton>
 
         <IconButton>
-          <DarkTheme />
+          <DarkThemeIcon />
         </IconButton>
         {/* <IconButton>
-          <LightTheme />
+          <LightThemeIcon />
         </IconButton> */}
       </IconContainer>
       
