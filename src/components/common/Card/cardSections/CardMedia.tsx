@@ -1,6 +1,6 @@
 import { FC, HTMLProps } from "react";
 import { CSSProperties } from "styled-components";
-import { StyledCardMedia } from "./style";
+import { StyledCardMedia } from "../style";
 
 interface IProps extends HTMLProps<HTMLImageElement> {
   component?: any;

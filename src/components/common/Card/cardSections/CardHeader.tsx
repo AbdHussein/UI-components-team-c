@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from "react";
 import { CSSProperties } from "styled-components";
-import { StyledCardHeader } from "./style";
+import { StyledCardHeader } from "../style";
 
 interface IProps {
   action?: ReactNode;

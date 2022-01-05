@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 import { CSSProperties } from "styled-components";
-import { StyledCardActions } from "./style";
+import { StyledCardActions } from "../style";
 
 interface IProps {
   children: ReactNode;

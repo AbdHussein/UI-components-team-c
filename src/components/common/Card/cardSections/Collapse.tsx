@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from "react";
 import { CSSProperties } from "styled-components";
-import { StyledCollapse } from "./style";
+import { StyledCollapse } from "../style";
 
 interface IProps {
   children: ReactNode;
