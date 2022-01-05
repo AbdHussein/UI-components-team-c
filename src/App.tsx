@@ -8,7 +8,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <div className="App">App</div>;
+      <div className="App">App</div>
     </ThemeProvider>
   );
 }
