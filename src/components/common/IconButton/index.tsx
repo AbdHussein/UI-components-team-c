@@ -12,6 +12,6 @@ const IconButton: FC<IProps> = ({ children, component, ...rest }) => {
       {children}
     </StyledIconButton>
   );
-};
 
+};
 export default IconButton;
