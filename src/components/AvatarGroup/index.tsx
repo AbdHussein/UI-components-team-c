@@ -1,10 +1,9 @@
-import { FC, ReactElement, ReactNode, createElement } from "react";
-import { CSSProperties } from "styled-components";
-import Avatar, { IAvatar } from "../Avatar";
+import { ReactNode, CSSProperties } from "react";
+import Avatar from "../Avatar";
 import { Group } from "./AvatarGroup.styled";
 
 interface IAvatarGroup {
-  children: ReactElement[];
+  children: ReactNode[];
   max?: number;
   total?: number;
   variant?: "circular" | "rounded" | "square" | string;
@@ -12,23 +11,22 @@ interface IAvatarGroup {
   spacing?: "medium" | "small" | number;
 }
 
-const Index: FC<IAvatarGroup> = ({
+const Index = ({
   children,
   style,
   variant,
   max = 5,
-  total = children.length,
-}) => {
-  const generateAvatars = () =>
-    children
-      .slice(0, max)
-      .map((child: ReactElement<IAvatar>) => (
-        <Avatar variant={variant} {...child.props} />
-      ))
-      .push(<Avatar variant={variant}>+{total - max}</Avatar>);
+  total = 10,
+}: IAvatarGroup) => {
   return (
     <Group style={{ ...style }} className={variant}>
-      {generateAvatars()}
+      {children.slice(0, max - 1)}
+      <Avatar
+        variant={variant}
+        style={{ marginLeft: "-8px", border: "1px solid #000" }}
+      >
+        +{total - max}
+      </Avatar>
     </Group>
   );
 };

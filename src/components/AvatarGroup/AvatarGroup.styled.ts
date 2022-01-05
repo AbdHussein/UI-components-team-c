@@ -4,17 +4,17 @@ export const Group = styled.div.attrs((props) => ({
   className: props.className,
 }))`
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
 
-  &.circular {
+  &.circular:nth-child(n) {
     border-radius: 50%;
   }
 
-  &.rounded {
+  &.rounded:nth-child(n) {
     border-radius: 5px;
   }
 
-  &.square {
+  &.square:nth-child(n) {
     border-radius: 0px;
   }
 `;

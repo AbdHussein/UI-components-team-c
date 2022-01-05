@@ -1,4 +1,4 @@
-import IconButton from "../common/IconButton";
+import { IconButton } from "../common/IconButton";
 import { HeaderLayout, IconContainer } from "./styles";
 import GithubIcon from "../common/Icons/GithubIcon";
 import DarkThemeIcon from "../common/Icons/DarkThemeIcon";
@@ -23,7 +23,6 @@ const Header = () => {
           <LightThemeIcon />
         </IconButton> */}
       </IconContainer>
-      
     </HeaderLayout>
   );
 };

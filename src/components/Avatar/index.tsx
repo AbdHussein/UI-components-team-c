@@ -1,5 +1,10 @@
-import { useState, ReactNode, ElementType, HTMLProps } from "react";
-import { CSSProperties } from "styled-components";
+import {
+  useState,
+  ReactNode,
+  ElementType,
+  HTMLProps,
+  CSSProperties,
+} from "react";
 import { Container } from "./Avatar.styled";
 
 export interface IAvatar extends HTMLProps<HTMLElement> {
@@ -14,7 +19,7 @@ export interface IAvatar extends HTMLProps<HTMLElement> {
   sizes?: string;
 }
 
-const Index: React.FC<IAvatar> = ({
+const Index = ({
   component,
   variant,
   alt,
@@ -25,7 +30,7 @@ const Index: React.FC<IAvatar> = ({
   imgProps,
   sizes,
   ...rest
-}) => {
+}: IAvatar): JSX.Element => {
   const [imageError, setImageError] = useState<boolean>(false);
   return (
     <>
