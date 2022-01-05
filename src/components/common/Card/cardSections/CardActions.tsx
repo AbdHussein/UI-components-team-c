@@ -7,6 +7,8 @@ interface IProps {
   sx?: CSSProperties;
 }
 
-export const CardActions: FC<IProps> = ({ children }) => {
+const CardActions: FC<IProps> = ({ children }) => {
   return <StyledCardActions>{children}</StyledCardActions>;
 };
+
+export default CardActions;
