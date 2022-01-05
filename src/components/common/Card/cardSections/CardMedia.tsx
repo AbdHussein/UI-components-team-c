@@ -9,14 +9,10 @@ interface IProps extends HTMLProps<HTMLImageElement> {
   src?: string;
 }
 
-export const CardMedia: FC<IProps> = ({
-  component,
-  sx,
-  image,
-  src,
-  ...rest
-}) => {
+const CardMedia: FC<IProps> = ({ component, sx, image, src, ...rest }) => {
   return (
     <StyledCardMedia src={image || src} style={sx} as={component} {...rest} />
   );
 };
+
+export default CardMedia;

@@ -1,4 +1,3 @@
-
 import { FC, HTMLProps, ReactNode } from "react";
 import { StyledIconButton } from "./style";
 
@@ -13,5 +12,6 @@ const IconButton: FC<IProps> = ({ children, component, ...rest }) => {
       {children}
     </StyledIconButton>
   );
-  }
-  export default IconButton
+
+};
+export default IconButton;
