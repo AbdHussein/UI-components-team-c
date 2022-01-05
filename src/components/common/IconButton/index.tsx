@@ -7,10 +7,11 @@ interface IProps extends HTMLProps<HTMLButtonElement> {
   component?: any;
 }
 
-export const IconButton: FC<IProps> = ({ children, component, ...rest }) => {
+const IconButton: FC<IProps> = ({ children, component, ...rest }) => {
   return (
     <StyledIconButton as={component} {...rest}>
       {children}
     </StyledIconButton>
   );
-};
+  }
+  export default IconButton
