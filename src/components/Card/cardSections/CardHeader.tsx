@@ -9,7 +9,7 @@ interface IProps {
   component?: any;
   sx?: CSSProperties;
 }
-export const CardHeader: FC<IProps> = ({ action, avatar }) => {
+const CardHeader: FC<IProps> = ({ action, avatar }) => {
   return (
     <StyledCardHeader>
       {avatar}
@@ -17,3 +17,5 @@ export const CardHeader: FC<IProps> = ({ action, avatar }) => {
     </StyledCardHeader>
   );
 };
+
+export default CardHeader;

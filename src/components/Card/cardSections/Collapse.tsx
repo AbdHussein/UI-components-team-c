@@ -17,6 +17,8 @@ enum orientation {
   vertical = "vertical",
 }
 
-export const Collapse: FC<IProps> = ({ children, isOpen }) => {
+const Collapse: FC<IProps> = ({ children, isOpen }) => {
   return <StyledCollapse isOpen={isOpen}>{children}</StyledCollapse>;
 };
+
+export default Collapse;

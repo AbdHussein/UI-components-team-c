@@ -8,13 +8,15 @@ interface IProps extends HTMLProps<HTMLDivElement> {
   sx?: CSSProperties;
 }
 
-export const Card: FC<IProps> = ({ children, component, sx, ...rest }) => {
+const Card: FC<IProps> = ({ children, component, sx, ...rest }) => {
   return (
     <CardWrapper style={sx} as={component} {...rest}>
       {children}
     </CardWrapper>
   );
 };
+
+export default Card;
 
 /*
 Using Demo

@@ -8,6 +8,8 @@ interface IProps {
   sx?: CSSProperties;
 }
 
-export const CardContent: FC<IProps> = ({ children }) => {
+const CardContent: FC<IProps> = ({ children }) => {
   return <StyledCardContent>{children}</StyledCardContent>;
 };
+
+export default CardContent;

@@ -1,6 +1,10 @@
 import { useState, lazy, Suspense } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./components/Theme/Theme";
+import { Route, Routes } from "react-router-dom";
+import { NotFoundPage } from "./screens/NotFoundPage";
+import ComponentsPage from "./screens/ComponentsPage";
+import HomePage from "./screens/HomePage";
 import AvatarGroup from "./components/AvatarGroup";
 import Avatar from "./components/Avatar";
 import "./App.css";
@@ -22,6 +26,16 @@ function App() {
         </AvatarGroup>
       </ThemeProvider>
     </Suspense>
+
+    // <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    //   <div className="App">
+    //     <Routes>
+    //       <Route path="/" element={<HomePage />} />
+    //       <Route path="/components/:name" element={<ComponentsPage />} />
+    //       <Route path="*" element={<NotFoundPage />} />
+    //     </Routes>
+    //   </div>
+    // </ThemeProvider>
   );
 }
 

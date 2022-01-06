@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
-export const Group = styled.div.attrs((props) => ({
-  className: props.className,
-}))`
+export const Group = styled.div<{ variant?: string }>`
   display: flex;
   flex-direction: row;
-
-  &.circular:nth-child(n) {
-    border-radius: 50%;
-  }
-
-  &.rounded:nth-child(n) {
-    border-radius: 5px;
-  }
-
-  &.square:nth-child(n) {
-    border-radius: 0px;
-  }
+  ${({ variant }) =>
+    variant === "circular"
+      ? `&.circular:nth-child(n) {
+        border-radius: 50%;
+      }`
+      : variant === "rounded"
+      ? `&.rounded:nth-child(n) {
+        border-radius: 5px;
+      }`
+      : variant === "square"
+      ? `&.square:nth-child(n) {
+        border-radius: 0px;
+      }`
+      : ""}
 `;
