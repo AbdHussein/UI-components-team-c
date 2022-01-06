@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
 export const LogoImage= styled.img`
-  width: 70px;
+  width: 50px;
   height: 70%;
 `
