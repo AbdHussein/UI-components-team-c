@@ -1,16 +1,21 @@
-import React, { ReactNode } from "react";
-import { CSSProperties } from "styled-components";
+import React from "react";
 import { Badge } from "./Badge.styled";
+
+export interface IOrigin {
+  vertical: "bottom" | "top";
+  horizontal: "right" | "left";
+}
 
 export interface IBadge {
   overlap?: "circular" | "rectangular";
+  anchorOrigin?: IOrigin;
   invisible?: boolean;
   max?: number;
-  style?: CSSProperties;
+  style?: React.CSSProperties;
   variant?: "dot" | "standard" | string;
-  badgeContent?: ReactNode;
-  children?: ReactNode;
-  component?: any;
+  badgeContent?: React.ReactNode;
+  children?: React.ReactNode;
+  component?: React.ElementType;
   color?:
     | "default"
     | "primary"
@@ -22,8 +27,37 @@ export interface IBadge {
     | string;
 }
 
-const Index: React.FC<IBadge> = ({ invisible, component }) => {
-  return <>{!invisible && <Badge as={component}></Badge>}</>;
+const Index = ({
+  invisible,
+  component,
+  children,
+  badgeContent,
+  overlap,
+  anchorOrigin,
+  color,
+}: IBadge) => {
+  return (
+    <>
+      {!invisible && (
+        <Badge
+          as={component}
+          overlap={overlap}
+          anchorOrigin={anchorOrigin}
+          color={color}
+        >
+          {React.Children.map(children, (child) =>
+            React.cloneElement(
+              child as React.ReactElement,
+              //@ts-ignore
+              { ...child?.props },
+              // <BadgeContent>{badgeContent}</BadgeContent>
+              badgeContent
+            )
+          )}
+        </Badge>
+      )}
+    </>
+  );
 };
 
 Index.defaultProps = {
@@ -32,6 +66,10 @@ Index.defaultProps = {
   max: 99,
   variant: "standard",
   color: "default",
+  anchorOrigin: {
+    vertical: "bottom",
+    horizontal: "left",
+  },
 };
 
 export default Index;

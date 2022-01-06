@@ -1,8 +1,21 @@
 import styled from "styled-components";
 
-export const Group = styled.div<{ variant?: string }>`
+/**
+ *
+ * 'medium' | 'small'
+ */
+export const Group = styled.div<{
+  variant?: string;
+  spacing?: string | number;
+}>`
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  gap: ${({ spacing }) =>
+    typeof spacing === "string"
+      ? (spacing === "medium" && `5px`) || (spacing === "small" && `2.5px`)
+      : `${spacing}px`};
+
   ${({ variant }) =>
     variant === "circular"
       ? `&.circular:nth-child(n) {
@@ -16,5 +29,5 @@ export const Group = styled.div<{ variant?: string }>`
       ? `&.square:nth-child(n) {
         border-radius: 0px;
       }`
-      : ""}
+      : ""};
 `;

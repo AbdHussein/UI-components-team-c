@@ -17,6 +17,7 @@ export interface IAvatar extends HTMLProps<HTMLElement> {
   srcSet?: string;
   imgProps?: HTMLProps<HTMLImageElement>;
   sizes?: string;
+  badge?: boolean;
 }
 
 const Index = ({

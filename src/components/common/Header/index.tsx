@@ -4,7 +4,7 @@ import { HeaderLayout, IconContainer } from "./styles";
 import GithubIcon from "../Icons/GithubIcon";
 import DarkThemeIcon from "../Icons/DarkThemeIcon";
 // import LightThemeIcon from "../common/Icons/LightThemeIcon";
-import Logo from "../Logo/Logo";
+import Logo from "../Logo";
 
 const Index = () => {
   const theme = useTheme();
