@@ -13,11 +13,11 @@ function App() {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <div className="App">
-      <Routes>
-        <Route   path="/"  element={<HomePage />}/>
-        <Route   path='/components/:name'  element={<ComponentsPage />} />
-        <Route path='*' element={<NotFoundPage/>}/>
-    </Routes>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/components/:name" element={<ComponentsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
       </div>
     </ThemeProvider>
   );
