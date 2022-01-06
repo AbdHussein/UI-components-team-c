@@ -14,7 +14,6 @@ export interface IBadge {
   style?: React.CSSProperties;
   variant?: "dot" | "standard" | string;
   badgeContent?: React.ReactNode;
-  children?: React.ReactNode;
   component?: React.ElementType;
   color?:
     | "default"
@@ -30,33 +29,26 @@ export interface IBadge {
 const Index = ({
   invisible,
   component,
-  children,
   badgeContent,
   overlap,
   anchorOrigin,
   color,
+  variant,
+  style,
+  max = 99,
 }: IBadge) => {
   return (
-    <>
-      {!invisible && (
-        <Badge
-          as={component}
-          overlap={overlap}
-          anchorOrigin={anchorOrigin}
-          color={color}
-        >
-          {React.Children.map(children, (child) =>
-            React.cloneElement(
-              child as React.ReactElement,
-              //@ts-ignore
-              { ...child?.props },
-              // <BadgeContent>{badgeContent}</BadgeContent>
-              badgeContent
-            )
-          )}
-        </Badge>
-      )}
-    </>
+    <Badge
+      as={component}
+      overlap={overlap}
+      anchorOrigin={anchorOrigin}
+      color={color}
+      invisible={invisible}
+      variant={variant}
+      style={style}
+    >
+      {(badgeContent as number) > max ? `+${max}` : badgeContent}
+    </Badge>
   );
 };
 

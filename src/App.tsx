@@ -7,7 +7,6 @@ import ComponentsPage from "./screens/ComponentsPage";
 import HomePage from "./screens/HomePage";
 import Avatar from "./components/Avatar";
 import avatar from "./assets/avatar.jpg";
-import Badge from "./components/Badge";
 import "./App.css";
 
 function App() {
@@ -33,9 +32,13 @@ function App() {
   return (
     <Suspense fallback={<></>}>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <Badge variant="dot">
-          <Avatar src={avatar}>7</Avatar>
-        </Badge>
+        <Avatar
+          src={avatar}
+          variant={"squared"}
+          badge={{ invisible: false, max: 20, style: { color: "red" } }}
+        >
+          7
+        </Avatar>
       </ThemeProvider>
       {/* <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <div className="App">

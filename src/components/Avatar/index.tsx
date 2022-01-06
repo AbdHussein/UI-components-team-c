@@ -5,7 +5,8 @@ import {
   HTMLProps,
   CSSProperties,
 } from "react";
-import { Container } from "./Avatar.styled";
+import Badge, { IBadge } from "../Badge";
+import { Avatar } from "./Avatar.styled";
 
 export interface IAvatar extends HTMLProps<HTMLElement> {
   variant?: "circular" | "rounded" | "square" | string;
@@ -17,7 +18,7 @@ export interface IAvatar extends HTMLProps<HTMLElement> {
   srcSet?: string;
   imgProps?: HTMLProps<HTMLImageElement>;
   sizes?: string;
-  badge?: boolean;
+  badge?: IBadge;
 }
 
 const Index = ({
@@ -30,13 +31,14 @@ const Index = ({
   srcSet,
   imgProps,
   sizes,
+  badge,
   ...rest
 }: IAvatar): JSX.Element => {
   const [imageError, setImageError] = useState<boolean>(false);
   return (
     <>
       {(src || alt || children) && (
-        <Container
+        <Avatar
           as={component}
           style={{ ...style }}
           className={variant}
@@ -52,7 +54,14 @@ const Index = ({
           )}
           {(imageError || (!src && alt)) && alt?.charAt(0).toUpperCase()}
           {(imageError || (!src && !alt)) && children}
-        </Container>
+          {!badge?.invisible && (
+            <Badge
+              variant={badge?.variant}
+              style={badge?.style}
+              badgeContent={badge?.badgeContent}
+            />
+          )}
+        </Avatar>
       )}
     </>
   );
