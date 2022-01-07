@@ -1,19 +1,18 @@
 import React from 'react'
 import {DialogChildren} from './styles'
 
-const DialogContent = ( {children} : {children: React.ReactNode} ) => {
+
+interface Props extends React.HTMLProps<HTMLDivElement> {
+  children: React.ReactNode;
+  component?: any;
+}
+
+const DialogContent = ( {children, component, ...rest}: Props ) => {
   return (
-    <DialogChildren >
+    <DialogChildren as={component} {...rest}>
       { children}
     </DialogChildren>
   )
 }
 
 export default DialogContent;
-
-// <Dialog />
-// <DialogActions />
-// <DialogContent />
-// <DialogContentText />
-// <DialogTitle />
-// <Slide />

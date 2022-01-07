@@ -15,5 +15,5 @@ export const Wrapper= styled('div')<Props>`
   width: ${( {fullScreen, maxWidth} )=> fullScreen? '100% ': maxWidth ? maxWidth : 'auto' } ;
   height: ${( {fullScreen} )=> fullScreen? '100% ': 'auto' } ;
   z-index: 500;
-  border-radius: 8px;
+  border-radius: ${( {fullScreen} )=> !fullScreen && '8px' };
 `

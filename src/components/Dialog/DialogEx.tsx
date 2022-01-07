@@ -14,7 +14,7 @@ const DialogEx = () => {
       <Dialog
           isOpen={display}
           onClose={() => setDisplay(false)}
-          fullScreen={true}
+          fullScreen={false}
           maxWidth="60%"
         >
           <DialogTitle>Chose Color</DialogTitle>

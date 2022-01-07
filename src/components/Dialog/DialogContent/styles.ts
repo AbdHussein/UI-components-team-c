@@ -6,6 +6,5 @@ interface Props{
 
 export const DialogChildren = styled('div')<Props>`
   width: 100%;
-  /* position: relative;
-z-index: 387; */
+  margin-bottom:  25px;
 `;
