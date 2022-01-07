@@ -30,7 +30,7 @@ function App() {
 
   return (
     <Suspense fallback={<></>}>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
         <GlobalStyles {...(theme === "dark" ? darkTheme : lightTheme)} />
         <div className="App">
           <Routes>
