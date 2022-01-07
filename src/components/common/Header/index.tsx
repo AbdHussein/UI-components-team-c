@@ -5,9 +5,14 @@ import GithubIcon from "../IconButton/Icons/GithubIcon";
 import DarkThemeIcon from "../IconButton/Icons/DarkThemeIcon";
 // import LightThemeIcon from "../common/Icons/LightThemeIcon";
 import Logo from "../Logo";
+import LightThemeIcon from "../IconButton/Icons/LightThemeIcon";
 
+interface IProps {
+  themee: string;
+  toggleTheme: () => void;
+}
 
-const Index = () => {
+const Index = ({ themee, toggleTheme }: IProps) => {
   const theme = useTheme();
   return (
     <HeaderLayout>
@@ -16,12 +21,15 @@ const Index = () => {
         <IconButton>
           <GithubIcon fill={theme.colors.info} />
         </IconButton>
-        <IconButton>
-          <DarkThemeIcon fill={theme.colors.info} />
-        </IconButton>
-        {/* <IconButton>
-          <LightThemeIcon />
-        </IconButton> */}
+        {themee === "light" ? (
+          <IconButton onClick={toggleTheme}>
+            <DarkThemeIcon fill={theme.colors.primary} />
+          </IconButton>
+        ) : (
+          <IconButton onClick={toggleTheme}>
+            <LightThemeIcon />
+          </IconButton>
+        )}
       </IconContainer>
     </HeaderLayout>
   );

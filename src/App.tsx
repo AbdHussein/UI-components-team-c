@@ -8,11 +8,13 @@ import HomePage from "./screens/HomePage";
 import Avatar from "./components/Avatar";
 import avatar from "./assets/avatar.jpg";
 import "./App.css";
+import SuspenseFallback from "./components/common/SuspenseFallback/SuspenseFallback";
 
 function App() {
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = useCallback(() => {
+    console.log('toggleTheme --->', theme);
     if (theme === "dark") {
       localStorage.setItem("theme", "light");
       setTheme("light");
@@ -30,11 +32,11 @@ function App() {
   }, []);
 
   return (
-    <Suspense fallback={<></>}>
+    <Suspense fallback={<SuspenseFallback />}>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <div className="App">
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage theme={theme} toggleTheme={toggleTheme} />} />
             <Route path="/components/:name" element={<ComponentsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
