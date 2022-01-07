@@ -5,9 +5,9 @@ import { Route, Routes } from "react-router-dom";
 import { NotFoundPage } from "./screens/NotFoundPage";
 import ComponentsPage from "./screens/ComponentsPage";
 import HomePage from "./screens/HomePage";
-import Avatar from "./components/Avatar";
 import avatar from "./assets/avatar.jpg";
 import "./App.css";
+import Avatar from "./components/Avatar";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -32,13 +32,16 @@ function App() {
   return (
     <Suspense fallback={<></>}>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <div className="App">
+        <Avatar variant="circular" src={avatar}>
+          7
+        </Avatar>
+        {/* <div className="App">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/components/:name" element={<ComponentsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
-        </div>
+        </div> */}
       </ThemeProvider>
     </Suspense>
   );

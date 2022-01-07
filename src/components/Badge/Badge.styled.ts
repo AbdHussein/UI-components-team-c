@@ -8,9 +8,8 @@ export const Badge = styled(Avatar)`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  right: 0;
-  /* top: 35px;
-    left: 25px; */
+  bottom: 14%;
+  right: 14%;
   transform: translate(50%, -50%);
   width: 12px;
   height: 12px;

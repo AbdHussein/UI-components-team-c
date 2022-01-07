@@ -16,7 +16,7 @@ export const Avatar = styled.div.attrs((props) => ({
   color: ${(props) => props?.style?.color};
   height: ${(props) => props?.style?.height || "40px"};
   width: ${(props) => props?.style?.width || "40px"};
-  z-index: 0;
+  z-index: 10;
 
   &.circular {
     border-radius: 50%;
