@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, lazy, Suspense } from "react";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./helpers/Theme/Theme";
+import { lightTheme, darkTheme } from "./helpers/Theme";
 import { Route, Routes } from "react-router-dom";
 import { NotFoundPage } from "./screens/NotFoundPage";
 import ComponentsPage from "./screens/ComponentsPage";
