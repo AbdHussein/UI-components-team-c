@@ -3,25 +3,25 @@ import "styled-components";
 declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
-      primary: String;
-      secondary: String;
-      error: String;
-      success: String;
-      warning: String;
-      info: String;
+      primary: string;
+      secondary: string;
+      error: string;
+      success: string;
+      warning: string;
+      info: string;
     };
     textColors: {
-      primary: String;
-      secondary: String;
-      disabled: String;
+      primary: string;
+      secondary: string;
+      disabled: string;
     };
     background: {
-      paper: String;
-      default: String;
+      paper: string;
+      default: string;
     };
     common: {
-      black: String;
-      white: String;
+      black: string;
+      white: string;
     };
   }
 }

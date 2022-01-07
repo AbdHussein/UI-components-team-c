@@ -9,12 +9,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <div className="App">
-        <Typography variant="h1" gutterBottom={true}>
-          subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Quos blanditiis tenetur
-        </Typography>
-      </div>
+      <div className="App"></div>
     </ThemeProvider>
   );
 }
