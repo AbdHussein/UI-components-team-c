@@ -23,16 +23,16 @@ export const StyledIconButton = styled.button<{}>`
   padding: 8px;
   border-radius: 50%;
   color: rgba(0, 0, 0, 0.54);
-  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: ${(props) => props.theme.textColors.primary};
   transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   margin-left: auto;
-  -webkit-transition: -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   &:hover {
-    background-color: rgba(0, 0, 0, 0.04);
+    /* background-color: rgba(255, 255, 255, 0.08); */
+    background-color: ${(props) =>
+      props.theme.background.default === "#0a1929"
+        ? "rgba(255, 255, 255, 0.08)"
+        : "rgba(0, 0, 0, 0.4)"};
   }
 `;

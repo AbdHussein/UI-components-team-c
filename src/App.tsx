@@ -43,6 +43,9 @@ function App() {
           7
         </Avatar>
         {/* <div className="App">
+      <ThemeProvider theme={darkTheme}>
+        <GlobalStyles {...(theme === "dark" ? darkTheme : lightTheme)} />
+        <div className="App">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/components/:name" element={<ComponentsPage />} />

@@ -1,5 +1,4 @@
 import styled, { DefaultTheme } from "styled-components";
-import { getProperty } from "../../helpers";
 import { Avatar } from "../Avatar/Avatar.styled";
 
 export const Badge = styled(Avatar)`
