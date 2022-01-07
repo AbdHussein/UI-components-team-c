@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const IconButton= styled.button`
-  width: 45px ;
+export const IconButton = styled.button`
+  width: 45px;
   height: 45px;
   border-radius: 10px;
   display: flex;
@@ -14,9 +14,7 @@ export const IconButton= styled.button`
   padding: 3px;
   cursor: pointer;
 
-  &:hover{
-    background-color:  rgba(232, 232, 232, 1);
-    /* border: 2px solid black; */
-
+  &:hover {
+    background-color: rgba(232, 232, 232, 1);
   }
-` 
+`;
