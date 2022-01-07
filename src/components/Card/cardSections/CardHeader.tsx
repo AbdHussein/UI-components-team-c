@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from "react";
 import { CSSProperties } from "styled-components";
+import Typography from "../../Typography";
 import { StyledCardHeader } from "../style";
 
 interface IProps {
@@ -12,8 +13,8 @@ interface IProps {
 const CardHeader: FC<IProps> = ({ action, avatar }) => {
   return (
     <StyledCardHeader>
-      {avatar}
-      {action}
+      <div style={{ marginRight: "16px" }}>{avatar}</div>
+      <div>{action}</div>
     </StyledCardHeader>
   );
 };
