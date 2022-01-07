@@ -1,10 +1,10 @@
-import React from 'react'
-import Index from '../components/LeftSideCompoentsPage/LeftSideCompoentsPage/Index'
+import React from "react";
+import LeftSideCompoentsPage from "../components/common/LeftSideCompoentsPage";
 
 export default function ComponentsPage() {
-    return (
-        <div>
-          <Index/>  
-        </div>
-    )
+  return (
+    <div>
+      <LeftSideCompoentsPage />
+    </div>
+  );
 }

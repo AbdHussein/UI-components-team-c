@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-interface ICardWrapper {}
-
-export const StyledIconButton = styled.button<ICardWrapper>`
+export const StyledIconButton = styled.button<{}>`
   display: inline-flex;
   align-items: center;
   justify-content: center;

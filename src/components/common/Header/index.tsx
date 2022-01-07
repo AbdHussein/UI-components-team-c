@@ -1,31 +1,29 @@
-import IconButton from "../common/IconButton"
+import IconButton from "../IconButton";
+import { useTheme } from "styled-components";
 import { HeaderLayout, IconContainer } from "./styles";
-import GithubIcon from "../common/Icons/GithubIcon";
-import DarkThemeIcon from "../common/Icons/DarkThemeIcon";
+import GithubIcon from "../Icons/GithubIcon";
+import DarkThemeIcon from "../Icons/DarkThemeIcon";
 // import LightThemeIcon from "../common/Icons/LightThemeIcon";
+import Logo from "../Logo";
 
-import Logo from "../common/Logo/Logo";
-
-const Header = () => {
+const Index = () => {
+  const theme = useTheme();
   return (
     <HeaderLayout>
       <Logo />
-
       <IconContainer>
         <IconButton>
-          <GithubIcon />
+          <GithubIcon fill={theme.colors.info} />
         </IconButton>
-
         <IconButton>
-          <DarkThemeIcon />
+          <DarkThemeIcon fill={theme.colors.info} />
         </IconButton>
         {/* <IconButton>
           <LightThemeIcon />
         </IconButton> */}
       </IconContainer>
-      
     </HeaderLayout>
   );
 };
 
-export default Header;
+export default Index;

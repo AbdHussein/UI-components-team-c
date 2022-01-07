@@ -1,14 +1,12 @@
-import { IndexContiner } from "../LeftSideCompoentsPage.style";
+import { IndexContiner } from "./LeftSideCompoentsPage.style";
 import Header from "./Header";
 import ListOfComponents from "./ListOfComponents";
 
-
 export default function Index() {
-    return (
+  return (
     <IndexContiner style={{ overflowY: "scroll" }}>
-        <Header/>
-        <ListOfComponents/>
+      <Header />
+      <ListOfComponents />
     </IndexContiner>
-      
-    )
+  );
 }
