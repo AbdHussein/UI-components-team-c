@@ -6,14 +6,15 @@ import { NavLink } from "react-router-dom";
 // `;
 
 export const IndexContiner = styled.div`
-  width: 18%;
+  width: 240px;
   height: 100vh;
   background: ${(props) => props.theme.background.default};
+  /* position: fixed; */
 `;
 
 export const HeaderContiner = styled.div`
   width: 100%;
-  height: 10vh;
+  /* height: 10vh; */
   display: flex;
   justify-content: space-between;
   align-items: center;

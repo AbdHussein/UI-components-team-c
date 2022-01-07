@@ -1,8 +1,8 @@
 import IconButton from "../IconButton";
 import { useTheme } from "styled-components";
 import { HeaderLayout, IconContainer } from "./styles";
-import GithubIcon from "../Icons/GithubIcon";
-import DarkThemeIcon from "../Icons/DarkThemeIcon";
+import GithubIcon from "../IconButton/Icons/GithubIcon";
+import DarkThemeIcon from "../IconButton/Icons/DarkThemeIcon";
 // import LightThemeIcon from "../common/Icons/LightThemeIcon";
 import Logo from "../Logo";
 
