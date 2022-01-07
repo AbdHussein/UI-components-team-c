@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { DefaultTheme } from "styled-components";
+import { getProperty } from "../../helpers";
 import { Avatar } from "../Avatar/Avatar.styled";
 
 export const Badge = styled(Avatar)`
@@ -8,14 +9,31 @@ export const Badge = styled(Avatar)`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  bottom: 14%;
-  right: 14%;
-  transform: translate(50%, -50%);
+  ${(props) => {
+    //@ts-ignore
+    if (props?.anchorOrigin?.vertical === "bottom") return "bottom: 0;";
+    else return "top: 0;";
+  }}
+  ${(props) => {
+    //@ts-ignore
+    if (props?.anchorOrigin?.horizontal === "left") return "left: 0;";
+    else return "right: 0;";
+  }}
+  bottom: 0;
+  right: 0;
   width: 12px;
   height: 12px;
-  border-radius: 50%;
   z-index: 10;
-  background: #ff1885;
-  color: #f9f9f9;
+  background: ${({ theme, color }) => theme.colors[color as string]};
+  color: ${({ theme, color }) => theme.textColors[color as string]};
   font-size: 8px;
+
+  &.circular {
+    border-radius: 50%;
+  }
+
+  &.rectangular {
+    border-radius: 2px;
+    padding-inline: 10px;
+  }
 `;

@@ -5,6 +5,7 @@ import {
   HTMLProps,
   CSSProperties,
 } from "react";
+import { useTheme } from "styled-components";
 import Badge, { IBadge } from "../Badge";
 import { Avatar } from "./Avatar.styled";
 
@@ -34,6 +35,7 @@ const Index = ({
   badge,
   ...rest
 }: IAvatar): JSX.Element => {
+  const theme = useTheme();
   const [imageError, setImageError] = useState<boolean>(false);
   return (
     <>
@@ -59,6 +61,11 @@ const Index = ({
               variant={badge?.variant}
               style={badge?.style}
               badgeContent={badge?.badgeContent}
+              overlap={badge?.overlap}
+              anchorOrigin={badge?.anchorOrigin}
+              max={badge?.max}
+              component={badge?.component}
+              color={badge?.color}
             />
           )}
         </Avatar>

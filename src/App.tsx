@@ -32,7 +32,14 @@ function App() {
   return (
     <Suspense fallback={<></>}>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <Avatar variant="circular" src={avatar}>
+        <Avatar
+          variant="circular"
+          src={avatar}
+          badge={{
+            badgeContent: "7",
+            overlap: "circular",
+          }}
+        >
           7
         </Avatar>
         {/* <div className="App">

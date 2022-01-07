@@ -9,7 +9,6 @@ export const Avatar = styled.div.attrs((props) => ({
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   user-select: none;
   box-sizing: border-box;
   background-color: ${(props) => props?.style?.backgroundColor || "#ccc"};
@@ -17,16 +16,17 @@ export const Avatar = styled.div.attrs((props) => ({
   height: ${(props) => props?.style?.height || "40px"};
   width: ${(props) => props?.style?.width || "40px"};
   z-index: 10;
+  background-color: transparent;
 
-  &.circular {
+  &.circular img {
     border-radius: 50%;
   }
 
-  &.rounded {
+  &.rounded img {
     border-radius: 5px;
   }
 
-  &.square {
+  &.square img {
     border-radius: 0px;
   }
 
