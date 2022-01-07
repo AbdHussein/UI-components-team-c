@@ -2,6 +2,14 @@ import "styled-components";
 
 declare module "styled-components" {
   export interface DefaultTheme {
+    colors: {
+      primary: String;
+      secondary: String;
+      error: String;
+      success: String;
+      warning: String;
+      info: String;
+    };
     textColors: {
       primary: String;
       secondary: String;
@@ -14,14 +22,6 @@ declare module "styled-components" {
     common: {
       black: String;
       white: String;
-    };
-    colors: {
-      primary: String;
-      secondary: String;
-      error: String;
-      success: String;
-      warning: String;
-      info: String;
     };
   }
 }
