@@ -32,15 +32,6 @@ function App() {
   return (
     <Suspense fallback={<></>}>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <Avatar
-          src={avatar}
-          variant={"squared"}
-          badge={{ invisible: false, max: 20, style: { color: "red" } }}
-        >
-          7
-        </Avatar>
-      </ThemeProvider>
-      {/* <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <div className="App">
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -48,7 +39,7 @@ function App() {
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
-      </ThemeProvider> */}
+      </ThemeProvider>
     </Suspense>
   );
 }
