@@ -6,8 +6,6 @@ export const MUIBOXSection = styled.div`
   justify-content: space-around;
 
   height: 100vh;
-
-  color: white;
 `;
 
 export const MUIFeatures = styled.div`
@@ -15,13 +13,15 @@ export const MUIFeatures = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: rgb(0, 30, 60);
-
+  /* background-color: rgb(0, 30, 60); */
+  background-color: ${(props) => props.theme.background.default};
+  color: ${(props) => props.theme.textColors.primary};
   width: 100%;
 `;
 
 export const MUIComponents = styled.div`
-  background-color: rgb(10, 25, 41);
+  /* background-color: rgb(10, 25, 41); */
+  background-color: ${(props) => props.theme.background.paper};
 
   width: 100%;
 `;
@@ -47,6 +47,7 @@ export const Span = styled.span`
 `;
 
 export const Button = styled.button`
+  color: white;
   padding: 20px;
   border-radius: 10px;
   background-color: rgb(51, 153, 255);
