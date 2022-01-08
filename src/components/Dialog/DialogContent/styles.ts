@@ -6,5 +6,8 @@ interface Props{
 
 export const DialogChildren = styled('div')<Props>`
   width: 100%;
-  margin-bottom:  25px;
+  margin:  25px 0;
+  max-height: 70vh;
+  overflow: auto;
+  /* overflow-y: scroll; */
 `;
