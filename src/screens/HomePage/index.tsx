@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import Header from "../../components/common/Header";
 
@@ -15,6 +16,8 @@ import {
 } from "./HomePage.styled";
 
 export default function Index() {
+  const navigate = useNavigate();
+
   return (
     <React.Fragment>
       <Header />
@@ -31,7 +34,13 @@ export default function Index() {
               foundational and advanced components, enabling you to build your
               own design system and develop React applications faster.
             </Description>
-            <Button>Get Started</Button>
+            <Button
+              onClick={() => {
+                navigate(`/components/avatar`);
+              }}
+            >
+              Get Started
+            </Button>
           </MUIFeaturesContainer>
         </MUIFeatures>
         <MUIComponents></MUIComponents>
