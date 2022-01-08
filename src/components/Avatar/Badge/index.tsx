@@ -32,7 +32,7 @@ const Index = ({
   badgeContent,
   overlap,
   anchorOrigin,
-  color,
+  color = "default",
   variant,
   style,
   max = 99,
@@ -40,7 +40,7 @@ const Index = ({
   return (
     <Badge
       as={component}
-      overlap={overlap}
+      className={overlap}
       anchorOrigin={anchorOrigin}
       color={color}
       invisible={invisible}

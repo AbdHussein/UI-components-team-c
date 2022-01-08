@@ -4,10 +4,11 @@ import { lightTheme, darkTheme } from "./helpers/Theme";
 import { Route, Routes } from "react-router-dom";
 import { NotFoundPage } from "./screens/NotFoundPage";
 import ComponentsPage from "./screens/ComponentsPage";
-import HomePage from "./screens/HomePage/HomePage";
-import Avatar from "./components/Avatar";
+import HomePage from "./screens/HomePage";
 import avatar from "./assets/avatar.jpg";
 import "./App.css";
+import Avatar from "./components/Avatar/Avatar";
+import { GlobalStyles } from "./helpers/globalStyle";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -32,6 +33,7 @@ function App() {
   return (
     <Suspense fallback={<></>}>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <GlobalStyles {...(theme === "dark" ? darkTheme : lightTheme)} />
         <div className="App">
           <Routes>
             <Route path="/" element={<HomePage />} />

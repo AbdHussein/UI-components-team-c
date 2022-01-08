@@ -5,8 +5,9 @@ interface ICardWrapper {
 }
 
 export const CardWrapper = styled.div<ICardWrapper>`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.background.paper};
   color: rgba(0, 0, 0, 0.87);
+  color: ${(props) => props.theme.textColors.primary};
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   border-radius: 4px;
   box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
