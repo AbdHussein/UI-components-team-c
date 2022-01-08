@@ -15,7 +15,6 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   background-color: ${(props) => props.theme.background.default};
   color: ${(props) => props.theme.textColors.primary};
-  height: 10000px;
   @media (min-width: 1200px) {
     padding-left: 60px;
     padding-right: 60px;
@@ -45,16 +44,19 @@ export const Header = styled.header`
   right: 0;
   width: 100%;
   padding: 5px 0px 5px 8px;
-  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  /* transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
   transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
-    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  /* box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%); */
   flex-direction: column;
   backdrop-filter: blur(20px);
   border-style: solid;
   border-width: 0px 0px thin;
   background: ${(props) => props.theme.background.default}bb;
-  border-color: ${(props) => props.theme.background.default};
+  border-color: ${(props) =>
+    props.theme.background.default === "#ffffff"
+      ? "#e7ebf0"
+      : "rgba(194, 224, 255, 0.08)"};
   color: ${(props) => props.theme.colors.primary};
 
   @media (min-width: 1200px) {
