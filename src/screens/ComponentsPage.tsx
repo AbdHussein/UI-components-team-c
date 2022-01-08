@@ -1,4 +1,3 @@
-import React from 'react'
 import Index from '../components/LeftSideCompoentsPage/LeftSideCompoentsPage/Index'
 
 export default function ComponentsPage() {
@@ -8,3 +7,5 @@ export default function ComponentsPage() {
         </div>
     )
 }
+
+

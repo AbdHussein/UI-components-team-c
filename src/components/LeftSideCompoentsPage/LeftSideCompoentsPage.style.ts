@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { NavLink } from 'react-router-dom';
 
-const iLink = styled.div`
-color: $((props) => props.theme.background.default)
-`;
+
 
 export const  IndexContiner =styled.div`
     width:18%;
