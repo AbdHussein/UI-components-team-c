@@ -11,6 +11,7 @@ import TypographyContent from "./Content/TypographyContent";
 import { Header, Wrapper } from "./Style";
 import TableOfContent from "../../common/TableOfContent";
 import AvatarTableOfContent from "../../common/TableOfContent/Avatar";
+import Footer from "../Footer";
 
 const components = [
   { name: "card", component: <CardContentLayout /> },
@@ -36,7 +37,6 @@ const ComponentContent = () => {
     >
       <Header>
         <div>
-          new
           <IconButton>
             <DarkThemeIcon fill={theme.colors.info} />
           </IconButton>
@@ -48,6 +48,7 @@ const ComponentContent = () => {
           <TableOfContent content={AvatarTableOfContent} />
         </div>
       </Wrapper>
+      <Footer />
     </div>
   );
 };
