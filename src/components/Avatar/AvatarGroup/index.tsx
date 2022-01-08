@@ -16,7 +16,7 @@ const Index = ({
   style,
   variant,
   max = 5,
-  total = 10,
+  total = children.length,
   spacing,
 }: IAvatarGroup) => {
   return (
@@ -29,8 +29,12 @@ const Index = ({
           {...child?.props}
         />
       ))}
-      <Avatar variant={variant} style={{ marginLeft: "-8px" }}>
-        +{total - max}
+      <Avatar
+        variant={variant}
+        style={{ marginLeft: "-8px", backgroundColor: "#ccc" }}
+      >
+        {max && `${"+" + (total - (max - 1))}`}
+        {total && !max && `${"+" + (total - children.length)}`}
       </Avatar>
     </Group>
   );

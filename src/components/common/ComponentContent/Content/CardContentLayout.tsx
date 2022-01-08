@@ -1,14 +1,14 @@
 import { useState } from "react";
-import Card from "../../Card";
-import CardActions from "../../Card/cardSections/CardActions";
-import CardHeader from "../../Card/cardSections/CardHeader";
-import CardMedia from "../../Card/cardSections/CardMedia";
-import Collapse from "../../Card/cardSections/Collapse";
-import IconButton from "../../common/IconButton";
-import CardContent from "../../Card/cardSections/CardContent";
-import { DownArrow } from "../../common/IconButton/Icons/DownArrow";
-import Typography from "../../Typography";
-import Index from "../../Avatar/index";
+import Card from "../../../Card";
+import CardActions from "../../../Card/cardSections/CardActions";
+import CardHeader from "../../../Card/cardSections/CardHeader";
+import CardMedia from "../../../Card/cardSections/CardMedia";
+import Collapse from "../../../Card/cardSections/Collapse";
+import IconButton from "../../IconButton";
+import CardContent from "../../../Card/cardSections/CardContent";
+import { DownArrow } from "../../IconButton/Icons/DownArrow";
+import Typography from "../../../Typography";
+import Index from "../../../Avatar/Avatar/index";
 const CardContentLayout = () => {
   const [expanded, setExpanded] = useState<boolean>(false); // to open and close collapse
 

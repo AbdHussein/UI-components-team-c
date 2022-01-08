@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Avatar = styled.div.attrs((props) => ({
   className: props?.className,
   //@ts-ignore
-  badge: props?.badge,
+  variant: props?.variant,
 }))`
   position: relative;
   display: flex;
@@ -18,21 +18,26 @@ export const Avatar = styled.div.attrs((props) => ({
   z-index: 10;
   background-color: transparent;
 
-  &.circular img {
-    border-radius: 50%;
-  }
-
-  &.rounded img {
-    border-radius: 5px;
-  }
-
-  &.square img {
-    border-radius: 0px;
-  }
+  ${({ variant }) =>
+    variant === "circular"
+      ? "border-radius: 50% !important;"
+      : variant === "rounded"
+      ? "border-radius: 5px;"
+      : variant === "square"
+      ? "border-radius: 0px;"
+      : ""}
 
   & img {
     width: inherit;
     height: inherit;
     object-fit: contain;
+    ${({ variant }) =>
+      variant === "circular"
+        ? "border-radius: 50% !important;"
+        : variant === "rounded"
+        ? "border-radius: 5px;"
+        : variant === "square"
+        ? "border-radius: 0px;"
+        : ""}
   }
 `;

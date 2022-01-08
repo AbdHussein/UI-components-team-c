@@ -7,7 +7,8 @@ import ComponentsPage from "./screens/ComponentsPage";
 import HomePage from "./screens/HomePage";
 import avatar from "./assets/avatar.jpg";
 import "./App.css";
-import Avatar from "./components/Avatar";
+import Avatar from "./components/Avatar/Avatar";
+import { GlobalStyles } from "./helpers/globalStyle";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -32,7 +33,7 @@ function App() {
   return (
     <Suspense fallback={<></>}>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <Avatar
+        {/* <Avatar
           variant="circular"
           src={avatar}
           badge={{
@@ -41,9 +42,7 @@ function App() {
           }}
         >
           7
-        </Avatar>
-        {/* <div className="App">
-      <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
+        </Avatar> */}
         <GlobalStyles {...(theme === "dark" ? darkTheme : lightTheme)} />
         <div className="App">
           <Routes>
@@ -51,7 +50,7 @@ function App() {
             <Route path="/components/:name" element={<ComponentsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
-        </div> */}
+        </div>
       </ThemeProvider>
     </Suspense>
   );

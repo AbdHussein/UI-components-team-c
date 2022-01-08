@@ -5,7 +5,6 @@ import {
   HTMLProps,
   CSSProperties,
 } from "react";
-import { useTheme } from "styled-components";
 import Badge, { IBadge } from "../Badge";
 import { Avatar } from "./Avatar.styled";
 
@@ -24,7 +23,7 @@ export interface IAvatar extends HTMLProps<HTMLElement> {
 
 const Index = ({
   component,
-  variant,
+  variant = "circular",
   alt,
   children,
   style,
@@ -35,17 +34,11 @@ const Index = ({
   badge,
   ...rest
 }: IAvatar): JSX.Element => {
-  const theme = useTheme();
   const [imageError, setImageError] = useState<boolean>(false);
   return (
     <>
       {(src || alt || children) && (
-        <Avatar
-          as={component}
-          style={{ ...style }}
-          className={variant}
-          {...rest}
-        >
+        <Avatar as={component} style={{ ...style }} variant={variant} {...rest}>
           {src && !imageError && (
             <img
               src={src}
