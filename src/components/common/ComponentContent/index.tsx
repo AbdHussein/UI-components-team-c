@@ -1,20 +1,22 @@
 import React, { useMemo, useState } from "react";
 import { useParams } from "react-router";
 import { useTheme } from "styled-components";
-import IconButton from "../common/IconButton";
-import DarkThemeIcon from "../common/IconButton/Icons/DarkThemeIcon";
+import IconButton from "../IconButton";
+import DarkThemeIcon from "../IconButton/Icons/DarkThemeIcon";
 import AvatarContent from "./Content/AvatarContent";
 import CardContentLayout from "./Content/CardContentLayout";
 import DialogContent from "./Content/DialogContent";
 import SkeletonContent from "./Content/SkeletonContent";
 import TypographyContent from "./Content/TypographyContent";
 import { Header, Wrapper } from "./Style";
+import TableOfContent from "../../common/TableOfContent";
+import AvatarTableOfContent from "../../common/TableOfContent/Avatar";
 
 const components = [
   { name: "card", component: <CardContentLayout /> },
   { name: "skeleton", component: <SkeletonContent /> },
   { name: "dialog", component: <DialogContent /> },
-  { name: "avater", component: <AvatarContent /> },
+  { name: "avatar", component: <AvatarContent /> },
   { name: "typeography", component: <TypographyContent /> },
 ];
 
@@ -42,7 +44,9 @@ const ComponentContent = () => {
       </Header>
       <Wrapper>
         {components.map((item) => item.name === state && item.component)}
-        <div style={{ width: "240px" }}>new</div>
+        <div style={{ width: "240px" }}>
+          <TableOfContent content={AvatarTableOfContent} />
+        </div>
       </Wrapper>
     </div>
   );

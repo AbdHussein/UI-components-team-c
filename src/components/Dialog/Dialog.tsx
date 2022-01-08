@@ -8,7 +8,7 @@ interface Props {
   isOpen: boolean;
   onClose: () => void;
   fullScreen?: boolean;
-  maxWidth?: string
+  maxWidth?: string;
 }
 
 const Dialog = ({ children, isOpen, onClose, fullScreen, maxWidth }: Props) => {
@@ -16,11 +16,10 @@ const Dialog = ({ children, isOpen, onClose, fullScreen, maxWidth }: Props) => {
     <>
       {isOpen && (
         <Container>
-          <DialogWrapper fullScreen={fullScreen} maxWidth={maxWidth} >
-            {children}  
+          <DialogWrapper fullScreen={fullScreen} maxWidth={maxWidth}>
             {/* children such as DialogTitle DialogContent DialogActions */}
+            {children}
           </DialogWrapper>
-
           <Overlay onClick={onClose} />
         </Container>
       )}

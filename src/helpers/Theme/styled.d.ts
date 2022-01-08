@@ -3,6 +3,7 @@ import "styled-components";
 declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
+      [key: string]: string;
       primary: string;
       secondary: string;
       error: string;
@@ -11,15 +12,18 @@ declare module "styled-components" {
       info: string;
     };
     textColors: {
+      [key: string]: string;
       primary: string;
       secondary: string;
       disabled: string;
     };
     background: {
+      [key: string]: string;
       paper: string;
       default: string;
     };
     common: {
+      [key: string]: string;
       black: string;
       white: string;
     };

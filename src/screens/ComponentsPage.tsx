@@ -1,6 +1,5 @@
-import React from "react";
 import LeftSideCompoentsPage from "../components/common/LeftSideCompoentsPage";
-import ComponentContent from "../components/ComponentContent";
+import ComponentContent from "../components/common/ComponentContent";
 
 export default function ComponentsPage() {
   return (

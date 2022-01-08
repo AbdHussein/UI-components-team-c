@@ -10,8 +10,9 @@ export const Wrapper = styled.div`
   padding-right: 16px;
   padding-top: 100px;
   font-family: Arial;
-  max-width: 105ch;
+  /* max-width: 105ch; */
   position: relative;
+  justify-content: space-between;
   background-color: ${(props) => props.theme.background.default};
   color: ${(props) => props.theme.textColors.primary};
   height: 10000px;

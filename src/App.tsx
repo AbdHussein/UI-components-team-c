@@ -5,7 +5,9 @@ import { Route, Routes } from "react-router-dom";
 import { NotFoundPage } from "./screens/NotFoundPage";
 import ComponentsPage from "./screens/ComponentsPage";
 import HomePage from "./screens/HomePage";
+import avatar from "./assets/avatar.jpg";
 import "./App.css";
+import Avatar from "./components/Avatar/Avatar";
 import { GlobalStyles } from "./helpers/globalStyle";
 
 function App() {
@@ -30,7 +32,17 @@ function App() {
 
   return (
     <Suspense fallback={<></>}>
-      <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        {/* <Avatar
+          variant="circular"
+          src={avatar}
+          badge={{
+            badgeContent: "7",
+            overlap: "circular",
+          }}
+        >
+          7
+        </Avatar> */}
         <GlobalStyles {...(theme === "dark" ? darkTheme : lightTheme)} />
         <div className="App">
           <Routes>

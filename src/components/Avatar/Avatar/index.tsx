@@ -23,7 +23,7 @@ export interface IAvatar extends HTMLProps<HTMLElement> {
 
 const Index = ({
   component,
-  variant,
+  variant = "circular",
   alt,
   children,
   style,
@@ -38,12 +38,7 @@ const Index = ({
   return (
     <>
       {(src || alt || children) && (
-        <Avatar
-          as={component}
-          style={{ ...style }}
-          className={variant}
-          {...rest}
-        >
+        <Avatar as={component} style={{ ...style }} variant={variant} {...rest}>
           {src && !imageError && (
             <img
               src={src}
@@ -59,6 +54,11 @@ const Index = ({
               variant={badge?.variant}
               style={badge?.style}
               badgeContent={badge?.badgeContent}
+              overlap={badge?.overlap}
+              anchorOrigin={badge?.anchorOrigin}
+              max={badge?.max}
+              component={badge?.component}
+              color={badge?.color}
             />
           )}
         </Avatar>

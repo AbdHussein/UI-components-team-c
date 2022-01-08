@@ -23,7 +23,7 @@ export default function ListOfComponents() {
           <LinkStyle to={"/components/dialog"}>dialog </LinkStyle>
         </ItemStyle>
         <ItemStyle>
-          <LinkStyle to={"/components/avater"}>avater </LinkStyle>
+          <LinkStyle to={"/components/avatar"}>avatar </LinkStyle>
         </ItemStyle>
         <ItemStyle>
           <LinkStyle to={"/components/typeography"}>typeography </LinkStyle>
