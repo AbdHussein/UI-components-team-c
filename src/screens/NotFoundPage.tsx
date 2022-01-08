@@ -38,7 +38,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export const NotFoundPage: FC = () => {
+const NotFoundPage: FC = () => {
   return (
     <Wrapper>
       <div>
@@ -50,3 +50,5 @@ export const NotFoundPage: FC = () => {
     </Wrapper>
   );
 };
+
+export default NotFoundPage;

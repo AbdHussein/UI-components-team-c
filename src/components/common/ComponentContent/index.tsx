@@ -11,7 +11,10 @@ import TypographyContent from "./Content/TypographyContent";
 import { Header, Wrapper } from "./Style";
 import TableOfContent from "../../common/TableOfContent";
 import AvatarTableOfContent from "../../common/TableOfContent/Avatar";
+import Logo from "../Logo";
 import Footer from "../Footer";
+import { SpanStyle } from "../LeftSideCompoentsPage/LeftSideCompoentsPage.style";
+import LightThemeIcon from "../IconButton/Icons/LightThemeIcon";
 
 const components = [
   { name: "card", component: <CardContentLayout /> },
@@ -21,7 +24,11 @@ const components = [
   { name: "typeography", component: <TypographyContent /> },
 ];
 
-const ComponentContent = () => {
+const ComponentContent = ({
+  toggleTheme,
+}: {
+  toggleTheme: (theme: string) => void;
+}) => {
   const [state, setstate] = useState<string>("");
   const theme = useTheme();
 
@@ -38,7 +45,17 @@ const ComponentContent = () => {
       <Header>
         <div>
           <IconButton>
-            <DarkThemeIcon fill={theme.colors.info} />
+            {theme.type === "light" ? (
+              <DarkThemeIcon
+                fill={theme.colors.info}
+                onClick={() => toggleTheme("dark")}
+              />
+            ) : (
+              <LightThemeIcon
+                fill={theme.colors.info}
+                onClick={() => toggleTheme("light")}
+              />
+            )}
           </IconButton>
         </div>
       </Header>

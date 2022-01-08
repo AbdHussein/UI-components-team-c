@@ -19,8 +19,14 @@ export const HeaderContiner = styled.div`
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 1% 3%;
-  border-top: 0.5px solid gray;
+  padding: 3px 0px 5px 8px;
+  border-style: solid;
+  border-width: 0px 0px thin;
+  background-color: ${(props) => props.theme.background.default};
+  border-color: ${(props) =>
+    props.theme.background.default === "#ffffff"
+      ? "#e7ebf0"
+      : "rgba(194, 224, 255, 0.08)"};
 `;
 
 export const ListComponentsContiner = styled.ul`
@@ -63,7 +69,6 @@ export const SpanStyle = styled.span`
 export const MneuContiner = styled.div`
   width: 100%;
   height: 80%;
-  border-top: 0.1px solid rgba(0, 0, 0, 0.4);
   padding-top: 30px;
 `;
 
