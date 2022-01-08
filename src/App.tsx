@@ -4,7 +4,7 @@ import { lightTheme, darkTheme } from "./helpers/Theme";
 import { Route, Routes } from "react-router-dom";
 import { NotFoundPage } from "./screens/NotFoundPage";
 import ComponentsPage from "./screens/ComponentsPage";
-import HomePage from "./screens/HomePage";
+import HomePage from "./screens/HomePage/HomePage";
 import Avatar from "./components/Avatar";
 import avatar from "./assets/avatar.jpg";
 import "./App.css";
