@@ -14,7 +14,7 @@ import {
   Button,
 } from "./HomePage.styled";
 
-export default function HomePage() {
+export default function Index() {
   return (
     <React.Fragment>
       <Header />
