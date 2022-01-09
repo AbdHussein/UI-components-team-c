@@ -325,6 +325,7 @@ export default SkeletonContent;*/
 import DisplayPartOfSkeletonContent from "../../../Skeleton/DisplayPartOfSkeletonContent";
 import { PartsOfSkeletonContent } from "../../../Skeleton/PartsOfSkeletonContent/Helpers";
 import TableOfContent from "../../TableOfContent";
+import AvatarTableOfContent from "../../../common/TableOfContent/Avatar";
 
 
 const SkeletonContent = () => (
@@ -338,7 +339,7 @@ const SkeletonContent = () => (
 
   )}
    <div style={{ width: "240px" }}>
-        <TableOfContent content={} />
+        <TableOfContent content={AvatarTableOfContent} />
       </div>
 
   </div>
