@@ -12,7 +12,7 @@ export interface Iprops {
   bgColor?: string;
 }
 
-export const Index = ({
+export const Skeleton = ({
   width,
   height,
   animation,

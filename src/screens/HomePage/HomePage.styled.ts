@@ -12,7 +12,6 @@ export const MUIFeatures = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   /* background-color: rgb(0, 30, 60); */
   background-color: ${(props) => props.theme.background.default};
   color: ${(props) => props.theme.textColors.primary};
@@ -21,8 +20,7 @@ export const MUIFeatures = styled.div`
 
 export const MUIComponents = styled.div`
   /* background-color: rgb(10, 25, 41); */
-  background-color: ${(props) => props.theme.background.paper};
-
+  background-color: ${(props) => props.theme.background.default};
   width: 100%;
 `;
 

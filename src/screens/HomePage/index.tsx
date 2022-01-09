@@ -15,13 +15,16 @@ import {
   Button,
 } from "./HomePage.styled";
 
-export default function Index() {
+export default function Index({
+  toggleTheme,
+}: {
+  toggleTheme: (theme: string) => void;
+}) {
   const navigate = useNavigate();
 
   return (
     <React.Fragment>
-      <Header />
-
+      <Header toggleTheme={toggleTheme} />
       <MUIBOXSection>
         <MUIFeatures>
           <MUIFeaturesContainer>
@@ -36,7 +39,7 @@ export default function Index() {
             </Description>
             <Button
               onClick={() => {
-                navigate(`/components/avatar`);
+                navigate(`/components/card`);
               }}
             >
               Get Started

@@ -1,0 +1,26 @@
+import Typography from "../../Typography";
+import { GroupSkeleton } from "../SkeletonGroup/SkeletonGroup.styled";
+import { Container } from "./PulsateSkeleton.styled";
+
+  interface Iprops{
+    srcImg:string
+    title1:string
+    title2:string
+    title3:string
+
+  }
+const PulsateSkeleton = ({srcImg,title1,title2,title3}:Iprops) => {
+    return (
+      <Container>
+        <img src={srcImg}  alt=""/>
+        <Typography variant="h4" id="Avatar"> {title1}</Typography>
+        <Typography variant="h6" id="Avatar"> {title2}  </Typography>
+        <Typography variant="h6" id="Avatar"> {title3}</Typography>
+
+      </Container>
+      
+    );
+  };
+  
+  
+  export default PulsateSkeleton;

@@ -9,23 +9,28 @@ import DialogContent from "./Content/DialogContent";
 import SkeletonContent from "./Content/SkeletonContent";
 import TypographyContent from "./Content/TypographyContent";
 import { Header, Wrapper } from "./Style";
-import TableOfContent from "../../common/TableOfContent";
-import AvatarTableOfContent from "../../common/TableOfContent/Avatar";
+import LightThemeIcon from "../IconButton/Icons/LightThemeIcon";
 
 const components = [
-  { name: "card", component: <CardContentLayout /> },
-  { name: "skeleton", component: <SkeletonContent /> },
-  { name: "dialog", component: <DialogContent /> },
-  { name: "avatar", component: <AvatarContent /> },
-  { name: "typeography", component: <TypographyContent /> },
+  { name: "card", component: <CardContentLayout key={"card"} /> },
+  { name: "skeleton", component: <SkeletonContent key={"skeleton"} /> },
+  { name: "dialog", component: <DialogContent key={"dialog"} /> },
+  { name: "avatar", component: <AvatarContent key={"avatar"} /> },
+  { name: "typeography", component: <TypographyContent key={"typeography"} /> },
 ];
 
-const ComponentContent = () => {
-  const [state, setstate] = useState<string>("");
-  const theme = useTheme();
+const ComponentContent = ({
+  toggleTheme,
+}: {
+  toggleTheme: (theme: string) => void;
+}) => {
+  const [state, setstate] = useState<string>(""); // name from params
 
+  const theme = useTheme();
   const { name } = useParams();
+
   useMemo(() => setstate(name as string), [name]);
+
   return (
     <div
       style={{
@@ -36,17 +41,23 @@ const ComponentContent = () => {
     >
       <Header>
         <div>
-          new
           <IconButton>
-            <DarkThemeIcon fill={theme.colors.info} />
+            {theme.type === "light" ? (
+              <DarkThemeIcon
+                fill={theme.colors.info}
+                onClick={() => toggleTheme("dark")}
+              />
+            ) : (
+              <LightThemeIcon
+                fill={theme.colors.info}
+                onClick={() => toggleTheme("light")}
+              />
+            )}
           </IconButton>
         </div>
       </Header>
       <Wrapper>
         {components.map((item) => item.name === state && item.component)}
-        <div style={{ width: "240px" }}>
-          <TableOfContent content={AvatarTableOfContent} />
-        </div>
       </Wrapper>
     </div>
   );

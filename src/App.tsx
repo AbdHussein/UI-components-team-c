@@ -1,15 +1,14 @@
 import { useState, useEffect, useCallback, lazy, Suspense } from "react";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./helpers/Theme";
 import { Route, Routes } from "react-router-dom";
-import { NotFoundPage } from "./screens/NotFoundPage";
-import ComponentsPage from "./screens/ComponentsPage";
-import HomePage from "./screens/HomePage";
-import avatar from "./assets/avatar.jpg";
-import "./App.css";
-import Avatar from "./components/Avatar/Avatar";
+import SuspenseFallback from "./components/common/SuspenseFallback/SuspenseFallback";
+import { lightTheme, darkTheme } from "./helpers/Theme";
 import { GlobalStyles } from "./helpers/globalStyle";
-import Typography from "./components/Typography";
+
+const HomePage = lazy(() => import("./screens/HomePage"));
+const NotFoundPage = lazy(() => import("./screens/NotFoundPage"));
+const ComponentsPage = lazy(() => import("./screens/ComponentsPage"));
+
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -32,13 +31,16 @@ function App() {
   }, []);
 
   return (
-    <Suspense fallback={<></>}>
+    <Suspense fallback={<SuspenseFallback />}>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyles {...(theme === "dark" ? darkTheme : lightTheme)} />
         <div className="App">
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/components/:name" element={<ComponentsPage />} />
+            <Route path="/" element={<HomePage toggleTheme={toggleTheme} />} />
+            <Route
+              path="/components/:name"
+              element={<ComponentsPage toggleTheme={toggleTheme} />}
+            />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>

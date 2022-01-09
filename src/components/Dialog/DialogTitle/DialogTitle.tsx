@@ -1,8 +1,14 @@
 import React from 'react'
-import { Title } from './style'
-const DialogTitle = ( {children, styles} : {children: React.ReactNode, styles?: {}} ) => {
+import { Title } from './style';
+
+interface Props extends React.HTMLProps<HTMLDivElement> {
+  children: React.ReactNode;
+  component?: any;
+}
+
+const DialogTitle = ( {children, component, ...rest}: Props ) => {
   return (
-    <Title>
+    <Title as={component} {...rest}>
       {children}
     </Title>
   )

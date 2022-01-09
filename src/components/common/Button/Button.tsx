@@ -1,13 +1,16 @@
+import { HTMLProps } from 'react';
 import { CustomButton } from './styles';
 
-interface Props{
+interface Props extends HTMLProps<HTMLButtonElement>{
   title: string,
   onClickHandler?: ()=> void
-  
+  fontS?: string;
+  padding?: string;
+  component?: any
 }
-const Button = ({title, onClickHandler}: Props) => {
+const Button = ({title, component, onClickHandler, fontS, padding, ...rest}: Props) => {
   return (
-      <CustomButton onClick={onClickHandler}>
+      <CustomButton as={component} {...rest} fontS={fontS} padding={padding} onClick={onClickHandler}>
         {title}
       </CustomButton>
   )

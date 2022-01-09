@@ -10,8 +10,9 @@ export const Container = styled.div`
   margin: auto;
   -webkit-box-pack: center;
   padding: 24px;
-  background-color: ${({ theme }) => theme.background.paper};
+  background-color: ${({ theme }) => theme.background.default};
   border: 1px solid ${({ theme }) => theme.textColors.secondary};
   border-radius: 0.5em;
   border-image: initial;
+  
 `;

@@ -6,7 +6,7 @@ import DialogContent from "./DialogContent/DialogContent";
 import DialogTitle from "./DialogTitle/DialogTitle";
 
 const DialogEx = () => {
-  const [display, setDisplay] = useState<boolean>(true);
+  const [display, setDisplay] = useState<boolean>(false);
 
   return (
     <>
@@ -14,7 +14,7 @@ const DialogEx = () => {
       <Dialog
         isOpen={display}
         onClose={() => setDisplay(false)}
-        fullScreen={true}
+        fullScreen={false}
         maxWidth="60%"
       >
         <DialogTitle>Chose Color</DialogTitle>

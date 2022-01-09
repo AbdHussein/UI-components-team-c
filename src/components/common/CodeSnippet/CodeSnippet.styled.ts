@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
+  transition: height 3000ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 `;
 
 export const Actions = styled.div`
@@ -17,12 +18,12 @@ export const Actions = styled.div`
 
 export const CodeWrapper = styled.pre`
   padding: 16px;
-  background-color: ${({ theme }) => theme.background.paper};
+  background-color: rgb(0, 30, 60);
   color-scheme: dark;
   direction: ltr;
   border-radius: 10px;
   border: 1px solid rgb(19, 47, 76);
-  color: ${({ theme }) => theme.textColors.primary};
+  color: rgb(255, 255, 255);
   overflow: auto;
   max-width: calc(100vw - 32px);
   width: 100%;
@@ -34,10 +35,11 @@ export const Code = styled.code`
   font-size: 0.8125rem;
   line-height: 1.5;
   letter-spacing: 0px;
-  color: ${({ theme }) => theme.textColors.primary};
+  color: rgb(255, 255, 255);
   font-family: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
-  padding: 0px 5px;
   border-radius: 5px;
+  background-color: rgb(0, 30, 60);
+  padding-inline: 10px;
 `;

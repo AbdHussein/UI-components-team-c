@@ -17,4 +17,5 @@ export const StyledIcon = styled.svg<ICardWrapper>`
   -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   font-size: 1.5rem;
+  color:  ${ ({theme})=> theme.colors.primary };
 `;

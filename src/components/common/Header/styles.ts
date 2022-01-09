@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderLayout= styled.div`
   width: 100%;
-  /* background-color: #EBECF0; */
+  background-color: ${ ({theme})=> theme.background.default }; 
   display: flex;
   justify-content: space-between;
   align-items: center;
