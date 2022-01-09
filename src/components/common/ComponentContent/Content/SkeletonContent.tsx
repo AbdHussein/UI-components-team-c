@@ -10,6 +10,7 @@ import skeleton2 from "../../../../assets/skeleton/skeleton2.jpg";
 import skeleton4 from "../../../../assets/skeleton/skeleton4.jpg";
 import skeleton5 from "../../../../assets/skeleton/skeleton5.jpg";
 import TableOfContent from "../../../common/TableOfContent";
+import Footer from "../../Footer";
 
 const SkeletonContent = () => {
   return (
@@ -313,6 +314,7 @@ const SkeletonContent = () => {
       <div style={{ width: "240px" }}>
         <TableOfContent content={[]} />
       </div>
+      <Footer />
     </div>
   );
 };

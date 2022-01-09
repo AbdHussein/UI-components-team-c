@@ -1,11 +1,11 @@
-import React, { FC, ReactNode } from "react";
+import React, { ElementType, FC, ReactNode } from "react";
 import { CSSProperties } from "styled-components";
 import { StyledCollapse } from "../style";
 
 interface IProps {
   children: ReactNode;
   variant?: string;
-  component?: any;
+  component?: ElementType;
   sx?: CSSProperties;
   collapsedSize?: string | number;
   orientation?: orientation;

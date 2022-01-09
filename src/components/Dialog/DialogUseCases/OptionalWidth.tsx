@@ -23,18 +23,17 @@ const SelectOptions = [
   { key: "xl", value: "xl" },
 ];
 
-
 const DialogEx = () => {
   const [display, setDisplay] = useState<boolean>(false);
   const [maxWidth, setMaxWidth] = useState<string>(SelectOptions[1].value);
 
   const selectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     setMaxWidth(e.target.value);
   };
-  useEffect( ()=> {
-    console.log('maxWidth --->', maxWidth)
-  } )
+  useEffect(() => {
+    // console.log('maxWidth --->', maxWidth)
+  });
   return (
     <>
       <Button title="Open Dialog" onClickHandler={() => setDisplay(true)} />
@@ -49,7 +48,10 @@ const DialogEx = () => {
           <label style={{ marginRight: "10px" }}>Max Width: </label>
           <Select value={maxWidth} onChange={(e) => selectChange(e)}>
             {SelectOptions.map((opt) => (
-              <option key={opt.key} value={opt.value}> {opt.value} </option>
+              <option key={opt.key} value={opt.value}>
+                {" "}
+                {opt.value}{" "}
+              </option>
             ))}
           </Select>
         </DialogContent>
