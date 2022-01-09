@@ -28,5 +28,14 @@ declare module "styled-components" {
       black: string;
       white: string;
     };
+    typography: {
+      [key: string]: {
+        fontWeight: number;
+        fontSize: string;
+        lineHeight: number;
+        letterSpacing: string;
+        textTransform?: string;
+      };
+    };
   }
 }
