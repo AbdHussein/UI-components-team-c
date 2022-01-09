@@ -4,6 +4,7 @@ import FormDialog from "../../../Dialog/DialogUseCases/FormDialog";
 import CustomizeDialog from "../../../Dialog/DialogUseCases/CustomizeDialog";
 import FullScreenDialog from "../../../Dialog/DialogUseCases/FullScreenDialog";
 import OptionalWidth from "../../../Dialog/DialogUseCases/OptionalWidth";
+import Footer from "../../Footer";
 
 const DialogContent = () => {
   return (
@@ -81,6 +82,7 @@ const DialogContent = () => {
       <MainBox>
         <OptionalWidth />
       </MainBox>
+      <Footer />
     </div>
   );
 };
