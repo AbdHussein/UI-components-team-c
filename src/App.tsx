@@ -4,11 +4,11 @@ import { Route, Routes } from "react-router-dom";
 import SuspenseFallback from "./components/common/SuspenseFallback/SuspenseFallback";
 import { lightTheme, darkTheme } from "./helpers/Theme";
 import { GlobalStyles } from "./helpers/globalStyle";
+import Typography from "./components/Typography";
 
 const HomePage = lazy(() => import("./screens/HomePage"));
 const NotFoundPage = lazy(() => import("./screens/NotFoundPage"));
 const ComponentsPage = lazy(() => import("./screens/ComponentsPage"));
-
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -44,6 +44,7 @@ function App() {
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
+        <Typography variant="h1">Hi</Typography>
       </ThemeProvider>
     </Suspense>
   );

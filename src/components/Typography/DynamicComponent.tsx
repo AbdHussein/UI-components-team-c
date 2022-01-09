@@ -21,7 +21,5 @@ export const Styling = styled.div<IAttributes>`
     props.theme.typography[props.variant].letterSpacing};
 
   text-transform: ${(props) =>
-    props.theme.typography[props.variant].textTransform
-      ? props.theme.typography[props.variant].textTransform
-      : "lowercase"};
+    props.theme.typography[props.variant].textTransform || "none"};
 `;
