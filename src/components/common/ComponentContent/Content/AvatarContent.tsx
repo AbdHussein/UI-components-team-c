@@ -14,7 +14,7 @@ import {
 
 const AvatarContent = () => {
   return (
-    <div style={{ scrollBehavior: "smooth" }}>
+    <div>
       <Typography variant="h1" id="Avatar">
         Avatar
       </Typography>

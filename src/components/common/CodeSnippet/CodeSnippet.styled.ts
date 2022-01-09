@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
+  transition: height 3000ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 `;
 
 export const Actions = styled.div`
