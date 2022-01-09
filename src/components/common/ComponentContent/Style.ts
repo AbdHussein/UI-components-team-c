@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  margin: 0 auto;
+  margin: 70px auto 0;
   box-sizing: border-box;
-  padding: 100px 16px 0;
+  padding: 30px 16px 0;
   justify-content: space-between;
   background-color: ${(props) => props.theme.background.default};
   color: ${(props) => props.theme.textColors.primary};

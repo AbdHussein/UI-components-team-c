@@ -29,7 +29,11 @@ export const ContentList = styled.ul`
   list-style: none;
 `;
 
-export const ContentListItem = styled.ul<{ active?: boolean }>`
+export const ContentListItem = styled.ul<{
+  active?: boolean;
+  current?: boolean;
+}>`
+  /* background-color: ${(props) => (props.current ? "red" : "")}; */
   & a {
     text-decoration: none;
     display: inline-flex;
@@ -45,5 +49,6 @@ export const ContentListItem = styled.ul<{ active?: boolean }>`
     font-weight: 500;
     color: ${({ theme, active }) =>
       active ? theme.colors.primary : theme.textColors.secondary};
+    color: ${(props) => (props.current ? props.theme.colors.primary : "")};
   }
 `;
