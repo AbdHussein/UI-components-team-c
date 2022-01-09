@@ -9,7 +9,10 @@ export const StyledLine = styled.hr`
   flex-shrink: 0;
   border-width: 0px 0px thin;
   border-style: solid;
-  border-color: rgb(231, 235, 240);
+  border-color: ${(props) =>
+    props.theme.background.default === "#ffffff"
+      ? "rgb(231, 235, 240)"
+      : "rgb(19, 47, 76)"};
 `;
 export const StyledFooterContent = styled.div`
   margin: 24px 0px 32px;
@@ -17,6 +20,7 @@ export const StyledFooterContent = styled.div`
   -webkit-box-pack: justify;
   justify-content: space-between;
 `;
+
 export const StyledFooterCenterContent = styled.div`
   box-sizing: border-box;
   display: flex;
@@ -26,7 +30,10 @@ export const StyledFooterCenterContent = styled.div`
   -webkit-box-align: center;
   align-items: center;
   width: auto;
-  color: rgb(62, 80, 96);
+  color: ${(props) =>
+    props.theme.background.default === "#ffffff"
+      ? "rgb(62, 80, 96)"
+      : "rgb(178, 186, 194)"}; ;
 `;
 export const StyledFooterLink = styled(Link)`
   display: inline-flex;
@@ -56,4 +63,5 @@ export const StyledFooterLink = styled(Link)`
   text-transform: none;
   font-weight: 500;
   color: rgb(0, 127, 255);
+  color: ${(props) => props.theme.colors.primary};
 `;

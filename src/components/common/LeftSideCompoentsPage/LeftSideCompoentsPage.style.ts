@@ -9,12 +9,17 @@ export const IndexContiner = styled.div`
   width: 240px;
   height: 100vh;
   background: ${(props) => props.theme.background.default};
-  /* position: fixed; */
+  position: fixed;
+  padding-right: 8px;
+  border-right: 1px solid
+    ${(props) =>
+      props.theme.background.default === "#ffffff"
+        ? "rgb(231, 235, 240)"
+        : "rgb(19, 47, 76)"};
 `;
 
 export const HeaderContiner = styled.div`
   width: 100%;
-  /* height: 10vh; */
   display: flex;
   justify-content: space-between;
   align-items: center;
