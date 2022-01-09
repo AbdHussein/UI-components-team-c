@@ -6,12 +6,13 @@ import { NavLink } from "react-router-dom";
 // `;
 
 export const IndexContiner = styled.div`
-  width: 240px;
-  height: 100vh;
-  background: ${(props) => props.theme.background.default};
-  /* position: fixed; */
-`;
 
+/*position: fixed;*/
+width: 240px;
+  height: 100vh;
+  overflow-Y:scroll;
+  background: ${(props) => props.theme.background.default};
+`;
 export const HeaderContiner = styled.div`
   width: 100%;
   /* height: 10vh; */
@@ -21,11 +22,13 @@ export const HeaderContiner = styled.div`
   box-sizing: border-box;
   padding: 1% 3%;
   border-top: 0.5px solid gray;
+
 `;
 
 export const ListComponentsContiner = styled.ul`
   width: 100%;
   height: 80vh;
+
   background: "";
   list-style: none;
 `;
