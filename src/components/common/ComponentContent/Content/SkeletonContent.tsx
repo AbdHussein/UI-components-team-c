@@ -1,7 +1,7 @@
-import Typography from "../../../Typography";
+/*import Typography from "../../../Typography";
 import ComponentOverview from "../../ComponentOverview";
 import CodeSnippet from "../../CodeSnippet";
-import { Skeleton } from "../../../Skeleton/Skeleton";
+import { Skeleton } from "../../../Skeleton";
 import Index from "../../../Skeleton/SkeletonGroup/Index";
 import PulsateSkeleton from "../../../Skeleton/PulsateSkeleton/PulsateSkeleton";
 import skeleton3 from "../../../../assets/skeleton/skeleton3.jpg";
@@ -317,4 +317,35 @@ const SkeletonContent = () => {
   );
 };
 
+export default SkeletonContent;*/
+
+import { ReactElement } from "react"
+import DisplayPartOfSkeletonContent from "../../../Skeleton/DisplayPartOfSkeletonContent"
+export interface IPartsOfSkeletonContent{
+  title?:string,description?:string,ComponentOverview?:ReactElement, CodeSnippet?: ReactElement
+}
+const PartsOfSkeletonContent:IPartsOfSkeletonContent[]=[{
+  title:'Usge',
+  description:''
+  
+
+}
+]
+
+const SkeletonContent = () => (
+<>
+{
+  PartsOfSkeletonContent.map(part=>{
+    return <DisplayPartOfSkeletonContent title={part.title} description={part.description}/> }
+
+  )}
+
+  </>
+
+  )
+
 export default SkeletonContent;
+
+
+
+

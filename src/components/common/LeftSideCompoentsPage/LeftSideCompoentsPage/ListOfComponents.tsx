@@ -4,7 +4,7 @@ import {
   LinkStyle,
   ListComponentsContiner,
   MneuContiner,
-} from "./LeftSideCompoentsPage.style";
+} from "../LeftSideCompoentsPage.styled";
 
 export default function ListOfComponents() {
   return (

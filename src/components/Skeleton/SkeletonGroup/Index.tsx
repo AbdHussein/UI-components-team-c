@@ -1,4 +1,4 @@
-import { Skeleton } from "../Skeleton";
+import { Skeleton } from "..";
 import { GroupSkeleton } from "./SkeletonGroup.styled";
 
 
@@ -17,3 +17,7 @@ const Index = () => {
 
 
 export default Index;
+
+
+
+
