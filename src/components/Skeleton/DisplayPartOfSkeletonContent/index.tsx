@@ -1,20 +1,22 @@
-import React, { FC } from 'react';
-import { IPartsOfSkeletonContent } from '../../common/ComponentContent/Content/SkeletonContent';
 import Typography from '../../Typography';
+import { IPartsOfSkeletonContent } from '../PartsOfSkeletonContent/Helpers';
 
 
 
  const  DisplayPartOfSkeletonContent= ({ title,description,ComponentOverview, CodeSnippet}:IPartsOfSkeletonContent) => {
  return(
 <div>
-   {title &&  <Typography variant="h2" id={title}>
+    <Typography variant="h2" id={title}>
     {title}
-       </Typography>}
-     { description&&<Typography variant="body1" gutterBottom>
+       </Typography>
+     <Typography variant="body1" gutterBottom>
       {description}
-      </Typography>}
-      { ComponentOverview && {ComponentOverview}}
-      {ComponentOverview&&{CodeSnippet}}
+      </Typography>
+      {ComponentOverview}
+      {CodeSnippet}
+      <br/>
+
+      
 </div>
 )
 };

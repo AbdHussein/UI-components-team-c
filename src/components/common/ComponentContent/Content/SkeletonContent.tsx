@@ -321,28 +321,27 @@ const SkeletonContent = () => {
 
 export default SkeletonContent;*/
 
-import { ReactElement } from "react"
-import DisplayPartOfSkeletonContent from "../../../Skeleton/DisplayPartOfSkeletonContent"
-export interface IPartsOfSkeletonContent{
-  title?:string,description?:string,ComponentOverview?:ReactElement, CodeSnippet?: ReactElement
-}
-const PartsOfSkeletonContent:IPartsOfSkeletonContent[]=[{
-  title:'Usge',
-  description:''
-  
 
-}
-]
+import DisplayPartOfSkeletonContent from "../../../Skeleton/DisplayPartOfSkeletonContent";
+import { PartsOfSkeletonContent } from "../../../Skeleton/PartsOfSkeletonContent/Helpers";
+import TableOfContent from "../../TableOfContent";
+
 
 const SkeletonContent = () => (
-<>
+<div>
 {
   PartsOfSkeletonContent.map(part=>{
-    return <DisplayPartOfSkeletonContent title={part.title} description={part.description}/> }
+    return <DisplayPartOfSkeletonContent
+     title={part.title} description={part.description} 
+     CodeSnippet={part.CodeSnippet} 
+     ComponentOverview={part.ComponentOverview}  /> }
 
   )}
+   <div style={{ width: "240px" }}>
+        <TableOfContent content={} />
+      </div>
 
-  </>
+  </div>
 
   )
 

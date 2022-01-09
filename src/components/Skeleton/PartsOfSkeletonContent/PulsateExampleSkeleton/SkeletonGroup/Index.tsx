@@ -1,4 +1,4 @@
-import { Skeleton } from "..";
+import { Skeleton } from "../../..";
 import { GroupSkeleton } from "./SkeletonGroup.styled";
 
 
