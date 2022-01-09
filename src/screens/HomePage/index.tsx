@@ -39,7 +39,7 @@ export default function Index({
             </Description>
             <Button
               onClick={() => {
-                navigate(`/components/avatar`);
+                navigate(`/components/card`);
               }}
             >
               Get Started
