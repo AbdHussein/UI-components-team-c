@@ -8,7 +8,8 @@ import AvatarTableOfContent from "../../../common/TableOfContent/Avatar";
 
 
 const SkeletonContent = () => (
-<div>
+<>
+  <div style={{width: '90%'}}>
 {
   PartsOfSkeletonContent.map(part=>{
     return <DisplayPartOfSkeletonContent
@@ -16,12 +17,12 @@ const SkeletonContent = () => (
      CodeSnippet={part.CodeSnippet} 
      ComponentOverview={part.ComponentOverview}  /> }
 
-  )}
-   <div style={{ width: "240px" }}>
+  )}</div>
+   <div style={{ width: "240px" ,margin:'20px' }}>
         <TableOfContent content={AvatarTableOfContent} />
       </div>
 
-  </div>
+  </>
 
   )
 
