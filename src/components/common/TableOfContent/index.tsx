@@ -12,18 +12,22 @@ const Index = ({ content }: { content: IContent[] }) => {
   const location = useLocation();
   return (
     <Container>
-      <Typography gutterBottom variant={"body1"}>
-        Content
-      </Typography>
-      <ContentList>
-        {content?.map((c) => (
-          <ContentListItem active={isInViewport(c.id)} key={c.id}>
-            <a href={location.pathname + "#" + c.id}>
-              <span>{c.title}</span>
-            </a>
-          </ContentListItem>
-        ))}
-      </ContentList>
+      {content?.length > 0 && (
+        <>
+          <Typography gutterBottom variant={"body1"}>
+            Content
+          </Typography>
+          <ContentList>
+            {content?.map((c) => (
+              <ContentListItem active={isInViewport(c.id)} key={c.id}>
+                <a href={location.pathname + "#" + c.id}>
+                  <span>{c.title}</span>
+                </a>
+              </ContentListItem>
+            ))}
+          </ContentList>
+        </>
+      )}
     </Container>
   );
 };

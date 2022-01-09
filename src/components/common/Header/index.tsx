@@ -6,7 +6,11 @@ import DarkThemeIcon from "../IconButton/Icons/DarkThemeIcon";
 import LightThemeIcon from "../IconButton/Icons/LightThemeIcon";
 import Logo from "../Logo";
 
-const Index = ({ toggleTheme }: { toggleTheme: (theme: string) => void }) => {
+interface IProps {
+  toggleTheme: (theme: string) => void;
+}
+
+const Index = ({ toggleTheme }: IProps) => {
   const theme = useTheme();
   return (
     <HeaderLayout>
@@ -19,19 +23,15 @@ const Index = ({ toggleTheme }: { toggleTheme: (theme: string) => void }) => {
         >
           <GithubIcon fill={theme.colors.info} />
         </IconButton>
-        <IconButton>
-          {theme.type === "light" ? (
-            <DarkThemeIcon
-              fill={theme.colors.info}
-              onClick={() => toggleTheme("dark")}
-            />
-          ) : (
-            <LightThemeIcon
-              fill={theme.colors.info}
-              onClick={() => toggleTheme("light")}
-            />
-          )}
-        </IconButton>
+        {theme.type === "light" ? (
+          <IconButton onClick={() => toggleTheme("dark")}>
+            <DarkThemeIcon fill={theme.colors.primary} />
+          </IconButton>
+        ) : (
+          <IconButton onClick={() => toggleTheme("light")}>
+            <LightThemeIcon fill={theme.colors.primary} />
+          </IconButton>
+        )}
       </IconContainer>
     </HeaderLayout>
   );

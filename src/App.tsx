@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, lazy, Suspense } from "react";
 import { ThemeProvider } from "styled-components";
 import { Route, Routes } from "react-router-dom";
+import SuspenseFallback from "./components/common/SuspenseFallback/SuspenseFallback";
 import { lightTheme, darkTheme } from "./helpers/Theme";
 import { GlobalStyles } from "./helpers/globalStyle";
 const HomePage = lazy(() => import("./screens/HomePage"));
@@ -28,7 +29,7 @@ function App() {
   }, []);
 
   return (
-    <Suspense fallback={<></>}>
+    <Suspense fallback={<SuspenseFallback />}>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyles {...(theme === "dark" ? darkTheme : lightTheme)} />
         <div className="App">

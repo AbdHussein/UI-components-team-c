@@ -1,4 +1,4 @@
-import { FC, HTMLProps, ReactNode } from "react";
+import { FC, HTMLProps, MouseEventHandler, ReactNode } from "react";
 import { StyledIconButton } from "./style";
 
 interface IProps extends HTMLProps<HTMLButtonElement> {
@@ -12,6 +12,5 @@ const IconButton: FC<IProps> = ({ children, component, ...rest }) => {
       {children}
     </StyledIconButton>
   );
-
 };
 export default IconButton;

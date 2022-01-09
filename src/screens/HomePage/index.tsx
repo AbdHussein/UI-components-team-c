@@ -25,7 +25,6 @@ export default function Index({
   return (
     <React.Fragment>
       <Header toggleTheme={toggleTheme} />
-
       <MUIBOXSection>
         <MUIFeatures>
           <MUIFeaturesContainer>

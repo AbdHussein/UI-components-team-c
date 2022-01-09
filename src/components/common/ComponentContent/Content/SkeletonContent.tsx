@@ -1,4 +1,3 @@
-
 import Typography from "../../../Typography";
 import ComponentOverview from "../../ComponentOverview";
 import CodeSnippet from "../../CodeSnippet";
@@ -11,9 +10,11 @@ import  skeleton2 from '../../../../assets/skeleton/skeleton2.jpg';
 import  skeleton4 from '../../../../assets/skeleton/skeleton4.jpg';
 import  skeleton5 from '../../../../assets/skeleton/skeleton5.jpg';
 
+
 const SkeletonContent = () => {
   return (
     <div>
+
       <Typography variant="h1" id="Skeleton">Skeleton</Typography>
       <Typography variant="body1" gutterBottom>
         Display a placeholder preview of your content before the data gets loaded to reduce load-time frustration.
@@ -24,6 +25,7 @@ const SkeletonContent = () => {
       </Typography>
       <CodeSnippet
         full_code={`
+
         {
           item ? (
             <img
@@ -39,7 +41,7 @@ const SkeletonContent = () => {
           );
         }
             `}
-        simple_code={`
+          simple_code={`
         {
           item ? (
             <img
@@ -83,12 +85,13 @@ const SkeletonContent = () => {
             document.getElementById("root")
             );
             `}
-        simple_code={`
+          simple_code={`
         <Skeleton variant="text" />
         <Skeleton variant="circular" width={40} height={40} />
         <Skeleton variant="rectangular" width={210} height={118} />
         </
         `}
+
       />
             <br/>
 
@@ -103,6 +106,7 @@ const SkeletonContent = () => {
      </ComponentOverview>
       <CodeSnippet
         full_code={`
+
           import  Avatar  from "./Avatar";
           import ReactDOM from react-dom';
           
@@ -117,7 +121,7 @@ const SkeletonContent = () => {
             document.getElementById("root")
           );
         `}
-        simple_code={`
+          simple_code={`
         <Skeleton />
         <Skeleton animation="wave" />
         <Skeleton animation={false} />
@@ -173,11 +177,10 @@ const SkeletonContent = () => {
         full_code={`
         <Typography variant="h1">{loading ? <Skeleton /> : 'h1'}</Typography>
         `}
-        simple_code={`
+          simple_code={`
         <Typography variant="h1">{loading ? <Skeleton /> : 'h1'}</Typography>
         `}/>
               <br/>
-
   <ComponentOverview style={{ flexDirection:'column'}}>
     <ComponentOverview style={{border:'none'}}>
         <Skeleton  height={50}/>
@@ -220,7 +223,7 @@ const SkeletonContent = () => {
             document.getElementById("root")
           );
         `}
-        simple_code={`
+          simple_code={`
         <Skeleton 
          bgColor='black'
          variant="rectangular"
@@ -229,9 +232,13 @@ const SkeletonContent = () => {
         
         `}
       />
-   
-      
       </div>
+        />
+      </div>
+      <div style={{ width: "240px" }}>
+        <TableOfContent content={[]} />
+      </div>
+    </div>
   );
 };
 

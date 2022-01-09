@@ -9,8 +9,6 @@ import DialogContent from "./Content/DialogContent";
 import SkeletonContent from "./Content/SkeletonContent";
 import TypographyContent from "./Content/TypographyContent";
 import { Header, Wrapper } from "./Style";
-import TableOfContent from "../../common/TableOfContent";
-import AvatarTableOfContent from "../../common/TableOfContent/Avatar";
 import LightThemeIcon from "../IconButton/Icons/LightThemeIcon";
 
 const components = [
