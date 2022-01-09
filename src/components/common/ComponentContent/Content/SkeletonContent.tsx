@@ -56,6 +56,8 @@ const SkeletonContent = () => {
         }
         `}
       />
+            <br/>
+
       <Typography variant="h2" id="Variants">Variants</Typography>
       <Typography variant="body1" gutterBottom>the component supports 3 shape variants.</Typography>
       <ComponentOverview style={{ flexDirection:'column'}}>
@@ -88,6 +90,8 @@ const SkeletonContent = () => {
         </
         `}
       />
+            <br/>
+
       <Typography variant="h2" id="Animations">Animations</Typography>
       <Typography variant="body1" gutterBottom>
         By default, the skeleton pulsates, but you can change the animation to a wave or disable it entirely.
@@ -119,6 +123,8 @@ const SkeletonContent = () => {
         <Skeleton animation={false} />
         `}
       />
+            <br/>
+
       <Typography variant="h2" id="Pulsate example"> Pulsate example </Typography>
       <ComponentOverview style={{ flexDirection:'column'}}>
         <div  style={{display:'flex'}}>
@@ -170,6 +176,8 @@ const SkeletonContent = () => {
         simple_code={`
         <Typography variant="h1">{loading ? <Skeleton /> : 'h1'}</Typography>
         `}/>
+              <br/>
+
   <ComponentOverview style={{ flexDirection:'column'}}>
     <ComponentOverview style={{border:'none'}}>
         <Skeleton  height={50}/>
