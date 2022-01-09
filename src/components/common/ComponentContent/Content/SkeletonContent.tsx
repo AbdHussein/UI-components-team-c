@@ -220,17 +220,8 @@ const SkeletonContent = () => {
         
         `}
       />
-<<<<<<< HEAD
    
       
-=======
-    </div>
-    <div>
-      </div>
-      <div style={{ width: "240px" }}>
-        <TableOfContent content={[]} />
-      </div>
->>>>>>> 16fd380f8894703306d50a5f906db7b29521d836
       </div>
   );
 };
