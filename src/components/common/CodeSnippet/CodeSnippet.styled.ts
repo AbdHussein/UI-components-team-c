@@ -40,4 +40,6 @@ export const Code = styled.code`
   font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
   border-radius: 5px;
+  background-color: rgb(0, 30, 60);
+  padding-inline: 10px;
 `;
