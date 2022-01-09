@@ -14,4 +14,5 @@ export const Container = styled.div`
   border: 1px solid ${({ theme }) => theme.textColors.secondary};
   border-radius: 0.5em;
   border-image: initial;
+  
 `;

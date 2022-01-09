@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { Animation, Iprops, Variant } from "./Index";
+import { Animation, Iprops, Variant } from "./Skeleton";
 
 const handleBorderRadius = (Shape: Variant | undefined) => {
   switch (Shape) {
@@ -43,7 +43,7 @@ const handleWidth = (width: string | number | undefined) => {
     case "string":
       return width;
     default:
-      return "200px";
+      return "210px";
   }
 };
 

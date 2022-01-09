@@ -1,5 +1,5 @@
-import LeftSideCompoentsPage from "../components/common/LeftSideCompoentsPage";
 import ComponentContent from "../components/common/ComponentContent";
+import LeftSideCompoentsPage from "../components/common/LeftSideCompoentsPage";
 
 export default function ComponentsPage({
   toggleTheme,
@@ -13,3 +13,5 @@ export default function ComponentsPage({
     </div>
   );
 }
+
+
