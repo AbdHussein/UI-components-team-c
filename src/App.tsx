@@ -9,6 +9,7 @@ import avatar from "./assets/avatar.jpg";
 import "./App.css";
 import Avatar from "./components/Avatar/Avatar";
 import { GlobalStyles } from "./helpers/globalStyle";
+import Typography from "./components/Typography";
 
 function App() {
   const [theme, setTheme] = useState("light");

@@ -27,29 +27,14 @@ declare module "styled-components" {
       black: string;
       white: string;
     };
+    typography: {
+      [key: string]: {
+        fontWeight: number;
+        fontSize: string;
+        lineHeight: number;
+        letterSpacing: string;
+        textTransform?: string;
+      };
+    };
   }
-}
-
-export interface DefaultTheme {
-  colors: {
-    primary: string;
-    secondary: string;
-    error: string;
-    success: string;
-    warning: string;
-    info: string;
-  };
-  textColors: {
-    primary: string;
-    secondary: string;
-    disabled: string;
-  };
-  background: {
-    paper: string;
-    default: string;
-  };
-  common: {
-    black: string;
-    white: string;
-  };
 }
