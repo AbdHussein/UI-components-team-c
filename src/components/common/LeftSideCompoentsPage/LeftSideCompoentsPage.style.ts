@@ -6,11 +6,9 @@ import { NavLink } from "react-router-dom";
 // `;
 
 export const IndexContiner = styled.div`
-
-/*position: fixed;*/
-width: 240px;
+  /*position: fixed;*/
+  width: 240px;
   height: 100vh;
-  overflow-Y:scroll;
   background: ${(props) => props.theme.background.default};
 
   position: fixed;
