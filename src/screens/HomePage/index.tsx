@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import Header from "../../components/common/Header";
 
@@ -14,10 +15,16 @@ import {
   Button,
 } from "./HomePage.styled";
 
-export default function Index() {
+export default function Index({
+  toggleTheme,
+}: {
+  toggleTheme: (theme: string) => void;
+}) {
+  const navigate = useNavigate();
+
   return (
     <React.Fragment>
-      <Header />
+      <Header toggleTheme={toggleTheme} />
 
       <MUIBOXSection>
         <MUIFeatures>
@@ -31,7 +38,13 @@ export default function Index() {
               foundational and advanced components, enabling you to build your
               own design system and develop React applications faster.
             </Description>
-            <Button>Get Started</Button>
+            <Button
+              onClick={() => {
+                navigate(`/components/avatar`);
+              }}
+            >
+              Get Started
+            </Button>
           </MUIFeaturesContainer>
         </MUIFeatures>
         <MUIComponents></MUIComponents>

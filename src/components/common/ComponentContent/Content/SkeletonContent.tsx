@@ -1,3 +1,4 @@
+
 import Typography from "../../../Typography";
 import ComponentOverview from "../../ComponentOverview";
 import CodeSnippet from "../../CodeSnippet";
@@ -5,7 +6,7 @@ import { Skeleton } from "../../../Skeleton/Skeleton";
 import Index from "../../../Skeleton/SkeletonGroup/Index";
 import PulsateSkeleton from "../../../Skeleton/PulsateSkeleton/PulsateSkeleton";
 
-const AvatarContent = () => {
+const SkeletonContent = () => {
   return (
     <div>
       <div>
@@ -258,10 +259,11 @@ const AvatarContent = () => {
     </div>
     <div>
       </div>
-      
+      <div style={{ width: "240px" }}>
+        <TableOfContent content={[]} />
       </div>
-
+      </div>
   );
 };
 
-export default AvatarContent;
+export default SkeletonContent;

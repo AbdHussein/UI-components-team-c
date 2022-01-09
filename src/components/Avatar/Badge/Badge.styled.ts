@@ -1,4 +1,4 @@
-import styled, { DefaultTheme } from "styled-components";
+import styled from "styled-components";
 import { Avatar } from "../Avatar/Avatar.styled";
 
 export const Badge = styled(Avatar)`
@@ -26,11 +26,9 @@ export const Badge = styled(Avatar)`
   background: ${({ theme, color }) => theme.colors[color as string]};
   color: ${({ theme, color }) => theme.textColors[color as string]};
   font-size: 8px;
-
   &.circular {
     border-radius: 50%;
   }
-
   &.rectangular {
     border-radius: 2px;
     padding-inline: 10px;
