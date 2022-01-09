@@ -12,7 +12,9 @@ const Index = ({ content }: { content: IContent[] }) => {
   const location = useLocation();
   return (
     <Container>
-      <Typography variant={"body1"}>Content</Typography>
+      <Typography gutterBottom variant={"body1"}>
+        Content
+      </Typography>
       <ContentList>
         {content?.map((c) => (
           <ContentListItem active={isInViewport(c.id)} key={c.id}>
