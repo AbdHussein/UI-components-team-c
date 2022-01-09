@@ -10,26 +10,26 @@ interface Props {
   component?: any;
   fullScreen?: boolean;
   maxWidth?: string;
-  
-  
 }
 
-const Dialog = ({ children, component, isOpen, onClose, fullScreen, maxWidth, ...rest }: Props) => {
+const Dialog = ({
+  children,
+  component,
+  isOpen,
+  onClose,
+  fullScreen,
+  maxWidth,
+  ...rest
+}: Props) => {
   return (
     <>
       {isOpen && (
-        <Container
-          as={component}
-          {...rest}
-        >
-          <DialogWrapper
-            fullScreen={fullScreen}
-            maxWidth={maxWidth}
-          >
-            {children}  
+        <Container as={component} {...rest}>
+          <DialogWrapper fullScreen={fullScreen} maxWidth={maxWidth}>
+            {children}
             {/* children such as DialogTitle DialogContent DialogActions */}
+            {children}
           </DialogWrapper>
-
           <Overlay onClick={onClose} />
         </Container>
       )}

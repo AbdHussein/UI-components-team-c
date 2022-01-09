@@ -3,31 +3,33 @@ import { useTheme } from "styled-components";
 import { HeaderLayout, IconContainer } from "./styles";
 import GithubIcon from "../IconButton/Icons/GithubIcon";
 import DarkThemeIcon from "../IconButton/Icons/DarkThemeIcon";
-// import LightThemeIcon from "../common/Icons/LightThemeIcon";
-import Logo from "../Logo";
 import LightThemeIcon from "../IconButton/Icons/LightThemeIcon";
+import Logo from "../Logo";
 
 interface IProps {
-  themee: string;
-  toggleTheme: () => void;
+  toggleTheme: (theme: string) => void;
 }
 
-const Index = ({ themee, toggleTheme }: IProps) => {
+const Index = ({ toggleTheme }: IProps) => {
   const theme = useTheme();
   return (
     <HeaderLayout>
       <Logo />
       <IconContainer>
-        <IconButton>
+        <IconButton
+          component={"a"}
+          href="https://github.com/mohammedshamia/UI-components-team-c"
+          target="_blank"
+        >
           <GithubIcon fill={theme.colors.info} />
         </IconButton>
-        {themee === "light" ? (
-          <IconButton onClick={toggleTheme}>
+        {theme.type === "light" ? (
+          <IconButton onClick={() => toggleTheme("dark")}>
             <DarkThemeIcon fill={theme.colors.primary} />
           </IconButton>
         ) : (
-          <IconButton onClick={toggleTheme}>
-            <LightThemeIcon />
+          <IconButton onClick={() => toggleTheme("light")}>
+            <LightThemeIcon fill={theme.colors.primary} />
           </IconButton>
         )}
       </IconContainer>

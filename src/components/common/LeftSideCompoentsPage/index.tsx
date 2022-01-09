@@ -4,9 +4,14 @@ import ListOfComponents from "./ListOfComponents";
 
 export default function Index() {
   return (
-    <IndexContiner style={{ overflowY: "scroll" }}>
-      <Header />
-      <ListOfComponents />
-    </IndexContiner>
+    <>
+      <IndexContiner style={{ position: "static" }} />
+      <IndexContiner>
+        <Header />
+        <ListOfComponents />
+      </IndexContiner>
+    </>
   );
 }
+
+

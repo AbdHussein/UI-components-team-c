@@ -1,6 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
 export const lightTheme: DefaultTheme = {
+  type: "light",
   colors: {
     primary: "#42a5f5",
     secondary: "#ba68c8",
@@ -15,16 +16,17 @@ export const lightTheme: DefaultTheme = {
     disabled: "#00000061",
   },
   background: {
-    paper: "#fff",
-    default: "#fff",
+    paper: "#ffffff",
+    default: "#ffffff",
   },
   common: {
-    black: "#000",
-    white: "#fff",
+    black: "#000000",
+    white: "#ffffff",
   },
 };
 
 export const darkTheme: DefaultTheme = {
+  type: "dark",
   colors: {
     primary: "#42a5f5",
     secondary: "#ab47bc",
@@ -34,16 +36,16 @@ export const darkTheme: DefaultTheme = {
     info: "#0288d1",
   },
   textColors: {
-    primary: "#fff",
-    secondary: "##FFFFFFB3",
+    primary: "#e7ebf0",
+    secondary: "#b2bac2",
     disabled: "##FFFFFF80",
   },
   background: {
-    paper: "#121212",
-    default: "#121212",
+    paper: "#1e1e1e",
+    default: "#0a1929",
   },
   common: {
-    black: "#000",
-    white: "#fff",
+    black: "#000000",
+    white: "#ffffff",
   },
 };

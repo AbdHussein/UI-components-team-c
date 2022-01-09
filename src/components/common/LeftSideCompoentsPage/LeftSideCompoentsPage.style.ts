@@ -6,26 +6,42 @@ import { NavLink } from "react-router-dom";
 // `;
 
 export const IndexContiner = styled.div`
-  width: 240px;
-  height: 100vh;
-  background: ${(props) => props.theme.background.default};
-  /* position: fixed; */
-`;
 
+/*position: fixed;*/
+width: 240px;
+  height: 100vh;
+  overflow-Y:scroll;
+  background: ${(props) => props.theme.background.default};
+
+  position: fixed;
+  padding-right: 8px;
+  border-right: 1px solid
+    ${(props) =>
+      props.theme.background.default === "#ffffff"
+        ? "rgb(231, 235, 240)"
+        : "rgb(19, 47, 76)"};
+`;
 export const HeaderContiner = styled.div`
   width: 100%;
-  /* height: 10vh; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 1% 3%;
-  border-top: 0.5px solid gray;
+
+  padding: 3px 0px 5px 8px;
+  border-style: solid;
+  border-width: 0px 0px thin;
+  background-color: ${(props) => props.theme.background.default};
+  border-color: ${(props) =>
+    props.theme.background.default === "#ffffff"
+      ? "#e7ebf0"
+      : "rgba(194, 224, 255, 0.08)"};
 `;
 
 export const ListComponentsContiner = styled.ul`
   width: 100%;
   height: 80vh;
+
   background: "";
   list-style: none;
 `;
@@ -63,7 +79,6 @@ export const SpanStyle = styled.span`
 export const MneuContiner = styled.div`
   width: 100%;
   height: 80%;
-  border-top: 0.1px solid rgba(0, 0, 0, 0.4);
   padding-top: 30px;
 `;
 

@@ -13,7 +13,7 @@ import {
   Body2,
 } from "./DynamicComponent";
 
-export interface ITypography {
+export interface ITypography extends React.HTMLProps<HTMLElement> {
   variant?: string;
   gutterBottom?: boolean;
   align?: string;
@@ -25,71 +25,72 @@ const returnComponent: React.FC<ITypography> = ({
   gutterBottom,
   align,
   children,
+  id,
 }) => {
   switch (variant) {
     case "h1":
       return (
-        <H1 align={align} gutterBottom={gutterBottom}>
+        <H1 align={align} gutterBottom={gutterBottom} id={id}>
           {children}
         </H1>
       );
     case "h2":
       return (
-        <H2 align={align} gutterBottom={gutterBottom}>
+        <H2 align={align} gutterBottom={gutterBottom} id={id}>
           {children}
         </H2>
       );
     case "h3":
       return (
-        <H3 align={align} gutterBottom={gutterBottom}>
+        <H3 align={align} gutterBottom={gutterBottom} id={id}>
           {children}
         </H3>
       );
     case "h4":
       return (
-        <H4 align={align} gutterBottom={gutterBottom}>
+        <H4 align={align} gutterBottom={gutterBottom} id={id}>
           {children}
         </H4>
       );
     case "h5":
       return (
-        <H5 align={align} gutterBottom={gutterBottom}>
+        <H5 align={align} gutterBottom={gutterBottom} id={id}>
           {children}
         </H5>
       );
     case "h6":
       return (
-        <H6 align={align} gutterBottom={gutterBottom}>
+        <H6 align={align} gutterBottom={gutterBottom} id={id}>
           {children}
         </H6>
       );
     case "subtitle1":
       return (
-        <SubTitle1 align={align} gutterBottom={gutterBottom}>
+        <SubTitle1 align={align} gutterBottom={gutterBottom} id={id}>
           {children}
         </SubTitle1>
       );
     case "subtitle2":
       return (
-        <SubTitle2 align={align} gutterBottom={gutterBottom}>
+        <SubTitle2 align={align} gutterBottom={gutterBottom} id={id}>
           {children}
         </SubTitle2>
       );
     case "body1":
       return (
-        <Body1 align={align} gutterBottom={gutterBottom}>
+        <Body1 align={align} gutterBottom={gutterBottom} id={id}>
           {children}
         </Body1>
       );
     case "body2":
       return (
-        <Body2 align={align} gutterBottom={gutterBottom}>
+        <Body2 align={align} gutterBottom={gutterBottom} id={id}>
           {children}
         </Body2>
       );
     case "button":
       return (
-        <Button align={align} gutterBottom={gutterBottom}>
+        <Button align={align} gutterBottom={gutterBottom} id={id}>
           {children}
         </Button>
       );

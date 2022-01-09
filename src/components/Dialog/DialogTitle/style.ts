@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-interface Props{
-  styles?: {}
+interface Props {
+  styles?: {};
 }
-export const Title= styled('h2')<Props>`
+export const Title = styled("h2")<Props>`
   font-family: Roboto, Helvetica, Arial, sans-serif;
   font-weight: 600;
   /* font-size: 20px; */
@@ -12,4 +12,4 @@ export const Title= styled('h2')<Props>`
   padding-bottom: 7px;
   width: 100%;
   border-bottom: 1px solid gray;
- `
+`;

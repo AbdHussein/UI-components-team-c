@@ -1,5 +1,4 @@
-import styled,{ css } from "styled-components";
-
+import styled, { css } from "styled-components";
 
 export const Flex = css`
   display: flex;
@@ -15,7 +14,8 @@ export const FullScreen = css`
   height: 100%;
 `;
 
-export const Container= styled.div`
+export const Container = styled.div`
   ${FullScreen};
   ${Flex};
-`
+  z-index: 100000;
+`;
