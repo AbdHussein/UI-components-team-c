@@ -24,11 +24,13 @@ const ComponentContent = ({
 }: {
   toggleTheme: (theme: string) => void;
 }) => {
-  const [state, setstate] = useState<string>("");
-  const theme = useTheme();
+  const [state, setstate] = useState<string>(""); // name from params
 
+  const theme = useTheme();
   const { name } = useParams();
+
   useMemo(() => setstate(name as string), [name]);
+
   return (
     <div
       style={{
@@ -54,12 +56,9 @@ const ComponentContent = ({
           </IconButton>
         </div>
       </Header>
-      <Wrapper style={{ scrollBehavior: "smooth" }}>
+      <Wrapper>
         {components.map((item) => item.name === state && item.component)}
       </Wrapper>
-      {/* <div style={{ width: "240px" }}>
-        <TableOfContent content={AvatarTableOfContent} />
-      </div> */}
     </div>
   );
 };
