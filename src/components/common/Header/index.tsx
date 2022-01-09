@@ -12,7 +12,11 @@ const Index = ({ toggleTheme }: { toggleTheme: (theme: string) => void }) => {
     <HeaderLayout>
       <Logo />
       <IconContainer>
-        <IconButton>
+        <IconButton
+          component={"a"}
+          href="https://github.com/mohammedshamia/UI-components-team-c"
+          target="_blank"
+        >
           <GithubIcon fill={theme.colors.info} />
         </IconButton>
         <IconButton>

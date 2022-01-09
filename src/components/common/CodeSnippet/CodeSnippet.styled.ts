@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
+  transition: height 3000ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 `;
 
 export const Actions = styled.div`
@@ -39,4 +40,6 @@ export const Code = styled.code`
   font-weight: 400;
   -webkit-font-smoothing: subpixel-antialiased;
   border-radius: 5px;
+  background-color: rgb(0, 30, 60);
+  padding-inline: 10px;
 `;

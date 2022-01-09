@@ -9,6 +9,7 @@ export const Container = styled.div`
   overflow-y: auto;
   padding: 16px 32px 16px 0px;
   display: none;
+  padding-inline: 50px;
   @media (min-width: 600px) {
     display: block;
   }

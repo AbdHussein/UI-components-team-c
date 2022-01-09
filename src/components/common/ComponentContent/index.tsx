@@ -14,11 +14,11 @@ import AvatarTableOfContent from "../../common/TableOfContent/Avatar";
 import LightThemeIcon from "../IconButton/Icons/LightThemeIcon";
 
 const components = [
-  { name: "card", component: <CardContentLayout /> },
-  { name: "skeleton", component: <SkeletonContent /> },
-  { name: "dialog", component: <DialogContent /> },
-  { name: "avatar", component: <AvatarContent /> },
-  { name: "typeography", component: <TypographyContent /> },
+  { name: "card", component: <CardContentLayout key={"card"} /> },
+  { name: "skeleton", component: <SkeletonContent key={"skeleton"} /> },
+  { name: "dialog", component: <DialogContent key={"dialog"} /> },
+  { name: "avatar", component: <AvatarContent key={"avatar"} /> },
+  { name: "typeography", component: <TypographyContent key={"typeography"} /> },
 ];
 
 const ComponentContent = ({
@@ -56,7 +56,7 @@ const ComponentContent = ({
           </IconButton>
         </div>
       </Header>
-      <Wrapper>
+      <Wrapper style={{ scrollBehavior: "smooth" }}>
         {components.map((item) => item.name === state && item.component)}
       </Wrapper>
       {/* <div style={{ width: "240px" }}>
