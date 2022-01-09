@@ -42,13 +42,14 @@ export const ContentListItem = styled.ul<{
     font-size: 0.8125rem;
     padding: 0px 8px 0px 10px;
     margin: 4px 0px 8px;
+    white-space: nowrap;
     cursor: pointer;
     border-left: 1px solid
-      ${({ theme, active }) => (active ? theme.colors.primary : "transparent")};
+      ${(props) => (props.current ? props.theme.colors.primary : "transparent")};
     box-sizing: border-box;
     font-weight: 500;
-    color: ${({ theme, active }) =>
-      active ? theme.colors.primary : theme.textColors.secondary};
+    color: ${({ theme, current }) =>
+      current ? theme.colors.primary : theme.textColors.secondary};
     color: ${(props) => (props.current ? props.theme.colors.primary : "")};
   }
 `;

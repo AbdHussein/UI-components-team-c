@@ -17,31 +17,6 @@ const Index = ({
 }) => {
   const location = useLocation();
 
-  // const [current, setCurrent] = useState("");
-
-  // const sections = document.querySelectorAll("section");
-
-  // window.onscroll = () => {
-  //   sections.forEach((section) => {
-  //     const sectionTop = section.offsetTop;
-  //     if (window.scrollY >= sectionTop - 60) {
-  //       setCurrent(section.getAttribute("id") as string);
-  //     }
-  //   });
-  //   console.log(current);
-  // };
-
-  // window.addEventListener("scroll", () => {
-  //   sections.forEach((section) => {
-  //     const sectionTop = section.offsetTop;
-  //     if (window.scrollY >= sectionTop - 60) {
-  //       setCurrent(section.getAttribute("id") as string);
-  //     }
-  //   });
-  //   console.log(sections);
-  //   console.log(current);
-  // });
-
   return (
     <Container>
       {content?.length > 0 && (
