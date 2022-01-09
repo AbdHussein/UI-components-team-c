@@ -3,14 +3,13 @@ import styled from "styled-components";
 export const Container = styled.div`
   top: 60px;
   width: 240px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  position: sticky;
+  right: 0;
+  position: fixed;
   height: calc(100vh - 70px);
   overflow-y: auto;
   padding: 16px 32px 16px 0px;
   display: none;
+  padding-inline: 50px;
   @media (min-width: 600px) {
     display: block;
   }

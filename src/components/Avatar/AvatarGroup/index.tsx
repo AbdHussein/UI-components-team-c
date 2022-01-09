@@ -21,8 +21,9 @@ const Index = ({
 }: IAvatarGroup) => {
   return (
     <Group style={{ ...style }} className={variant} spacing={spacing}>
-      {children.slice(0, max - 1).map((child) => (
+      {children.slice(0, max - 1).map((child, index) => (
         <Avatar
+          key={index}
           className={variant}
           style={{ marginLeft: "-8px" }}
           //@ts-ignore
