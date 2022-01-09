@@ -11,9 +11,6 @@ import TypographyContent from "./Content/TypographyContent";
 import { Header, Wrapper } from "./Style";
 import TableOfContent from "../../common/TableOfContent";
 import AvatarTableOfContent from "../../common/TableOfContent/Avatar";
-import Logo from "../Logo";
-import Footer from "../Footer";
-import { SpanStyle } from "../LeftSideCompoentsPage/LeftSideCompoentsPage.style";
 import LightThemeIcon from "../IconButton/Icons/LightThemeIcon";
 
 const components = [
@@ -61,11 +58,10 @@ const ComponentContent = ({
       </Header>
       <Wrapper style={{ scrollBehavior: "smooth" }}>
         {components.map((item) => item.name === state && item.component)}
-        <div style={{ width: "240px" }}>
-          <TableOfContent content={AvatarTableOfContent} />
-        </div>
       </Wrapper>
-      <Footer />
+      {/* <div style={{ width: "240px" }}>
+        <TableOfContent content={AvatarTableOfContent} />
+      </div> */}
     </div>
   );
 };

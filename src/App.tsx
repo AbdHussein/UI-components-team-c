@@ -3,12 +3,9 @@ import { ThemeProvider } from "styled-components";
 import { Route, Routes } from "react-router-dom";
 import { lightTheme, darkTheme } from "./helpers/Theme";
 import { GlobalStyles } from "./helpers/globalStyle";
-import "./App.css";
 const HomePage = lazy(() => import("./screens/HomePage"));
 const NotFoundPage = lazy(() => import("./screens/NotFoundPage"));
 const ComponentsPage = lazy(() => import("./screens/ComponentsPage"));
-// import avatar from "./assets/avatar.jpg";
-// import Avatar from "./components/Avatar/Avatar";
 
 function App() {
   const [theme, setTheme] = useState("light");
