@@ -7,16 +7,25 @@ interface Props {
   children: React.ReactNode;
   isOpen: boolean;
   onClose: () => void;
+  component?: any;
   fullScreen?: boolean;
-  maxWidth?: string
+  maxWidth?: string;
+  
+  
 }
 
-const Dialog = ({ children, isOpen, onClose, fullScreen, maxWidth }: Props) => {
+const Dialog = ({ children, component, isOpen, onClose, fullScreen, maxWidth, ...rest }: Props) => {
   return (
     <>
       {isOpen && (
-        <Container>
-          <DialogWrapper fullScreen={fullScreen} maxWidth={maxWidth} >
+        <Container
+          as={component}
+          {...rest}
+        >
+          <DialogWrapper
+            fullScreen={fullScreen}
+            maxWidth={maxWidth}
+          >
             {children}  
             {/* children such as DialogTitle DialogContent DialogActions */}
           </DialogWrapper>

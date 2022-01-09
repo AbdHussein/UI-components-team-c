@@ -1,9 +1,16 @@
 import React from 'react'
 import { Actions } from './styles'
 
-const DailogAction = ( {children} : {children: React.ReactNode} ) => {
+
+interface Props extends React.HTMLProps<HTMLDivElement> {
+  children: React.ReactNode;
+  component?: any;
+}
+
+
+const DailogAction = ( {children, component, ...rest}: Props ) => {
   return (
-    <Actions>
+    <Actions as={component} {...rest}>
       {children}
     </Actions>
   )
