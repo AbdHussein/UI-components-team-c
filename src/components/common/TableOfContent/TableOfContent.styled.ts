@@ -10,7 +10,7 @@ export const Container = styled.div`
   padding: 16px 32px 16px 0px;
   display: none;
   padding-inline: 50px;
-  @media (min-width: 600px) {
+  @media (min-width: 1300px) {
     display: block;
   }
 `;
