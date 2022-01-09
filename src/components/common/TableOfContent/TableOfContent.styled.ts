@@ -9,23 +9,13 @@ export const Container = styled.div`
   overflow-y: auto;
   padding: 16px 32px 16px 0px;
   display: none;
-  padding-inline: 50px;
   @media (min-width: 600px) {
     display: block;
   }
 `;
 
 export const ContentList = styled.ul`
-  margin: 0;
   font-size: 1rem;
-  line-height: 1.5;
-  letter-spacing: 0;
-  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
   list-style: none;
 `;
 
@@ -33,11 +23,9 @@ export const ContentListItem = styled.ul<{
   active?: boolean;
   current?: boolean;
 }>`
-  /* background-color: ${(props) => (props.current ? "red" : "")}; */
   & a {
     text-decoration: none;
     display: inline-flex;
-    -webkit-box-align: center;
     align-items: center;
     font-size: 0.8125rem;
     padding: 0px 8px 0px 10px;
