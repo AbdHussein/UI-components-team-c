@@ -196,7 +196,8 @@ const SkeletonContent = () => {
           <Typography variant="h6" > caption </Typography>
           </ComponentOverview>
       </ComponentOverview>
-   
+      <br/>
+
       <Typography variant="h2" id="Color">Color </Typography>
       <Typography variant="body1" gutterBottom>
       The color of the component can be customized by changing its background-color CSS property.This is especially useful when on a black background (as the skeleton will otherwise be invisible).
