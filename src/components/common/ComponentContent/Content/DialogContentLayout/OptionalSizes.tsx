@@ -63,7 +63,7 @@ const OptionalSizes = () => {
                     </Select>
                     </DialogContent>
                     <DailogAction>
-                    <Button title="colse" onClickHandler={() => setDisplay(false)} />
+                    <Button title="close" onClickHandler={() => setDisplay(false)} />
                     </DailogAction>
                 </Dialog>
                   </>
@@ -91,7 +91,7 @@ const OptionalSizes = () => {
             </Select>
             </DialogContent>
             <DailogAction>
-            <Button title="colse" onClickHandler={() => setDisplay(false)} />
+            <Button title="close" onClickHandler={() => setDisplay(false)} />
             </DailogAction>
         </Dialog>
       `}
