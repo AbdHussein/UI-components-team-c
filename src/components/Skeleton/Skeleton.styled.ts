@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { Animation, Iprops, Variant } from "./Skeleton";
+import { Animation, Iprops, Variant } from ".";
 
 const handleBorderRadius = (Shape: Variant | undefined) => {
   switch (Shape) {

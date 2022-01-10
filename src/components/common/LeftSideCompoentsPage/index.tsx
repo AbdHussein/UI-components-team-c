@@ -1,6 +1,6 @@
-import { IndexContiner } from "./LeftSideCompoentsPage.style";
-import Header from "./Header";
-import ListOfComponents from "./ListOfComponents";
+import { IndexContiner } from "./LeftSideCompoentsPage.styled";
+import Header from "./LeftSideCompoentsPage/Header";
+import ListOfComponents from "./LeftSideCompoentsPage/ListOfComponents";
 
 export default function Index() {
   return (

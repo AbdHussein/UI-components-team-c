@@ -1,5 +1,5 @@
-import Logo from "../Logo";
-import { HeaderContiner, SpanStyle } from "./LeftSideCompoentsPage.style";
+import Logo from "../../Logo";
+import { HeaderContiner, SpanStyle } from "../LeftSideCompoentsPage.styled";
 
 export default function Header() {
   return (
