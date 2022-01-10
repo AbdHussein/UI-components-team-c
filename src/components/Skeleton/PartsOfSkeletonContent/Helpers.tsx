@@ -20,50 +20,39 @@ export interface IPartsOfSkeletonContent{
 
 
  export const PartsOfSkeletonContent:IPartsOfSkeletonContent[]=[
-  { 
-    title:'Skeleton',
-    description:'Display a placeholder preview of your content before the data gets loaded to reduce load-time frustration.',
-    CodeSnippet:<></>,
+  {  title:'Skeleton',
+     description:'Display a placeholder preview of your content before the data gets loaded to reduce load-time frustration.',
+     CodeSnippet:<></>,
+     ComponentOverview:<></>
+   },
+  { title:'Usge',
+    description:'The component is designed to be used directly in your components. For instance:',
+    CodeSnippet:<UsageCodeSnippet/>,
     ComponentOverview:<></>
-
-  }
-  ,
-  {
-  title:'Usge',
-  description:'The component is designed to be used directly in your components. For instance:',
-  CodeSnippet:<UsageCodeSnippet/>,
-  ComponentOverview:<></>
-}
-,
-{
-title:'Variants',
-description:'The component supports 3 shape variants.',
-CodeSnippet:<VariantsCodeSnippet/>,
-ComponentOverview:<VariantsComponentOverview/>
-},
-{ 
-  title:'Animations',
-  description:'By default, the skeleton pulsates, but you can change the animation to a wave or disable it entirely.',
-  CodeSnippet:<AnimationCodeSnippet/>,
-  ComponentOverview:<AnimationComponentOverview/>
-
-},
-{ 
-  title:'Pulsate example',
-  description:'',
-  CodeSnippet:<></>,
-  ComponentOverview:<PulsateExampleComponentOverview/>
-
-},
-
-{title:'Inferring dimensions',
-description:'In addition to accepting width and height props, the component can also infer the dimensions.',
-  CodeSnippet:<InferringdimensionCodeSnippet/>,
-  ComponentOverview:<InferringdimensionComponentOverview/>
-},
-{title:'Color',
-description:'The color of the component can be customized by changing its background-color CSS property. This is especially useful when on a black background (as the skeleton will otherwise be invisible).',
-  CodeSnippet:<ColorCodeSnippet/>,
-  ComponentOverview:<ColorComponentOverview/>
-},
+  },
+  {title:'Variants',
+  description:'The component supports 3 shape variants.',
+  CodeSnippet:<VariantsCodeSnippet/>,
+  ComponentOverview:<VariantsComponentOverview/>
+  },
+  { title:'Animations',
+    description:'By default, the skeleton pulsates, but you can change the animation to a wave or disable it entirely.',
+    CodeSnippet:<AnimationCodeSnippet/>,
+    ComponentOverview:<AnimationComponentOverview/>
+  },
+  { title:'Pulsate example',
+    description:'',
+    CodeSnippet:<></>,
+    ComponentOverview:<PulsateExampleComponentOverview/>
+  },
+  {title:'Inferring dimensions',
+    description:'In addition to accepting width and height props, the component can also infer the dimensions.',
+    CodeSnippet:<InferringdimensionCodeSnippet/>,
+    ComponentOverview:<InferringdimensionComponentOverview/>
+  },
+  { title:'Color',
+    description:'The color of the component can be customized by changing its background-color CSS property. This is especially useful when on a black background (as the skeleton will otherwise be invisible).',
+    CodeSnippet:<ColorCodeSnippet/>,
+    ComponentOverview:<ColorComponentOverview/>
+  },
 ]
