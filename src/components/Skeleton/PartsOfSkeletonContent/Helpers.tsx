@@ -10,14 +10,12 @@ import UsageCodeSnippet from "./UsageSkeleton/UsageCodeSnippet"
 import VariantsCodeSnippet from "./VariantsSkeleton/VariantsCodeSnippet"
 import VariantsComponentOverview from "./VariantsSkeleton/VariantsComponentOverview"
 
-
 export interface IPartsOfSkeletonContent{
   title:string,
   description:string,
   ComponentOverview:ReactElement,
    CodeSnippet: ReactElement
 }
-
 
  export const PartsOfSkeletonContent:IPartsOfSkeletonContent[]=[
   {  title:'Skeleton',
