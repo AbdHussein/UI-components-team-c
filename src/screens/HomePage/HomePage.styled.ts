@@ -31,6 +31,19 @@ export const MUIFeaturesContainer = styled.div`
 export const Heading = styled.h1`
   font-size: 70px;
   margin-bottom: 10px;
+  @media (max-width: 1400px) {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+`;
+
+export const Subheading = styled.h3`
+  font-size: 40px;
+  margin-bottom: 10px;
+  @media (max-width: 1400px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const Description = styled.p`

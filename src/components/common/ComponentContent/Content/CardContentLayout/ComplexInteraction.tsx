@@ -21,7 +21,7 @@ const ComplexInteraction = () => {
   };
   return (
     <>
-      <Typography variant="h2">Complex Interaction</Typography>
+      <Typography variant="h3">Complex Interaction</Typography>
       <Typography variant="body1" gutterBottom>
         On desktop, card content can expand. (Click the downward chevron to view
         the recipe.)
@@ -156,6 +156,7 @@ const ComplexInteraction = () => {
       </Card>
         `}
       />
+      <br />
     </>
   );
 };
