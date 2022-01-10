@@ -11,14 +11,16 @@ import { useLocation } from "react-router-dom";
 const Index = ({
   content,
   current,
+  style,
 }: {
   content: IContent[];
   current?: string;
+  style?: React.CSSProperties;
 }) => {
   const location = useLocation();
 
   return (
-    <Container>
+    <Container style={style}>
       {content?.length > 0 && (
         <>
           <Typography gutterBottom variant={"body1"}>

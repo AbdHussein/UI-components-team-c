@@ -1,9 +1,6 @@
 import styled from "styled-components";
+import { Avatar } from "../Avatar/Avatar.styled";
 
-/**
- *
- * 'medium' | 'small'
- */
 export const Group = styled.div<{
   variant?: string;
   spacing?: string | number;
@@ -30,4 +27,8 @@ export const Group = styled.div<{
         border-radius: 0px;
       }`
       : ""};
+`;
+
+export const AvatarGroup = styled(Avatar)`
+  margin-left: -8px;
 `;
