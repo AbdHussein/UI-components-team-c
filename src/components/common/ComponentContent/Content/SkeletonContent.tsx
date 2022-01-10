@@ -1,12 +1,9 @@
 
-
-
 import DisplayPartOfSkeletonContent from "../../../Skeleton/DisplayPartOfSkeletonContent";
 import { PartsOfSkeletonContent } from "../../../Skeleton/PartsOfSkeletonContent/Helpers";
 import TableOfContent from "../../TableOfContent";
 import AvatarTableOfContent from "../../../common/TableOfContent/Avatar";
 import Footer from "../../Footer";
-
 
 const SkeletonContent = () => (
 <div>
@@ -20,15 +17,11 @@ const SkeletonContent = () => (
 
   )}
   </div>
-
    <div style={{ width: "240px" ,margin:'20px' }}>
-        <TableOfContent content={AvatarTableOfContent} />
-      </div>
-      <Footer/>
-
-
+      <TableOfContent content={AvatarTableOfContent} />
+   </div>
+    <Footer/>
   </div>
-
   )
 
 export default SkeletonContent;
