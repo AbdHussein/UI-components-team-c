@@ -41,3 +41,8 @@ export const Avatar = styled.div.attrs((props) => ({
         : ""}
   }
 `;
+
+export const RestAvatar = styled(Avatar)`
+  margin-left: -8px;
+  background-color: #ccc;
+`;

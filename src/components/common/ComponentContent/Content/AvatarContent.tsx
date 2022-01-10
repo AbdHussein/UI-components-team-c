@@ -20,20 +20,19 @@ const AvatarContent = () => {
   return (
     <>
       <div>
-        <Typography variant="h1" id="Avatar">
+        <Typography variant="h3" id="Avatar">
           Avatar
         </Typography>
         <Typography variant="body1" gutterBottom>
           Avatars are found throughout material design with uses in everything
           from tables to dialog menus.
         </Typography>
-        <Typography variant="h2" id="Image_avatars">
+        <Typography variant="h4" id="Image_avatars">
           Image avatars
         </Typography>
         <Typography variant="body1" gutterBottom>
           Image avatars can be created by passing standard <Code>img</Code>{" "}
-          props
-          <Code>src</Code> to the component.
+          props <Code>src</Code> to the component.
         </Typography>
         <ComponentOverview style={{ gap: "5px" }}>
           <Avatar alt="avatar1" src={Avatar1} />
@@ -72,7 +71,7 @@ const AvatarContent = () => {
         `}
         />
         <br />
-        <Typography variant="h2" id="Letter_avatars">
+        <Typography variant="h4" id="Letter_avatars">
           Letter avatars
         </Typography>
         <Typography variant="body1" gutterBottom>
@@ -113,7 +112,7 @@ const AvatarContent = () => {
 
         <br />
 
-        <Typography variant="h2" id="Sizes">
+        <Typography variant="h4" id="Sizes">
           Sizes
         </Typography>
         <Typography variant="body1" gutterBottom>
@@ -171,7 +170,7 @@ const AvatarContent = () => {
 
         <br />
 
-        <Typography variant="h2" id="Variants">
+        <Typography variant="h4" id="Variants">
           Variants
         </Typography>
         <Typography variant="body1" gutterBottom>
@@ -214,7 +213,7 @@ const AvatarContent = () => {
         `}
         />
         <br />
-        <Typography variant="h2" id="Grouped">
+        <Typography variant="h4" id="Grouped">
           Grouped
         </Typography>
         <Typography variant="body1" gutterBottom>

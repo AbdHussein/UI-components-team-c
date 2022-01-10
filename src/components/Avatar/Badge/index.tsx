@@ -26,6 +26,8 @@ export interface IBadge {
     | string;
 }
 
+// TODO: Refactor to a pure component.
+
 const Index = ({
   invisible,
   component,

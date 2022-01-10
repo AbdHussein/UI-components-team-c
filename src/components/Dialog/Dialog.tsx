@@ -27,8 +27,6 @@ const Dialog = ({
         <Container as={component} {...rest}>
           <DialogWrapper fullScreen={fullScreen} maxWidth={maxWidth}>
             {children}
-            {/* children such as DialogTitle DialogContent DialogActions */}
-            {children}
           </DialogWrapper>
           <Overlay onClick={onClose} />
         </Container>
