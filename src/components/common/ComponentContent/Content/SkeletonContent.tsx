@@ -5,11 +5,12 @@ import DisplayPartOfSkeletonContent from "../../../Skeleton/DisplayPartOfSkeleto
 import { PartsOfSkeletonContent } from "../../../Skeleton/PartsOfSkeletonContent/Helpers";
 import TableOfContent from "../../TableOfContent";
 import AvatarTableOfContent from "../../../common/TableOfContent/Avatar";
+import Footer from "../../Footer";
 
 
 const SkeletonContent = () => (
-<>
-  <div style={{width: '90%'}}>
+<div>
+  <div style={{width: '86%'}}>
 {
   PartsOfSkeletonContent.map(part=>{
     return <DisplayPartOfSkeletonContent
@@ -17,12 +18,16 @@ const SkeletonContent = () => (
      CodeSnippet={part.CodeSnippet} 
      ComponentOverview={part.ComponentOverview}  /> }
 
-  )}</div>
+  )}
+  </div>
+
    <div style={{ width: "240px" ,margin:'20px' }}>
         <TableOfContent content={AvatarTableOfContent} />
       </div>
+      <Footer/>
 
-  </>
+
+  </div>
 
   )
 
