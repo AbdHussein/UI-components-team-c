@@ -27,7 +27,11 @@ const returnComponent: React.FC<ITypography> = ({
       </Styling>
     );
   } else {
-    return <div></div>;
+    return (
+      <Styling variant={"h6"} align={align} gutterBottom={gutterBottom} id={id}>
+        {children}
+      </Styling>
+    );
   }
 };
 

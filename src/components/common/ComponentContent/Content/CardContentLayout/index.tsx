@@ -10,6 +10,7 @@ import TableOfContent from "../../../TableOfContent";
 import Introduction from "./Introduction";
 import BasicCard from "./BasicCard";
 import ComplexInteraction from "./ComplexInteraction";
+import Media from "./Media";
 
 export interface IContent {
   id: string;
@@ -31,6 +32,11 @@ const content: IContent[] = [
     title: "Complex Interaction",
     id: "Complex_Interaction",
     component: <ComplexInteraction />,
+  },
+  {
+    title: "Media",
+    id: "Media",
+    component: <Media />,
   },
 ];
 
