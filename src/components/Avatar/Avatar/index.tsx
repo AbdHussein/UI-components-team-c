@@ -21,6 +21,8 @@ export interface IAvatar extends HTMLProps<HTMLElement> {
   badge?: IBadge;
 }
 
+// TODO: Refactor to a pure component.
+
 const Index = ({
   component,
   variant = "circular",

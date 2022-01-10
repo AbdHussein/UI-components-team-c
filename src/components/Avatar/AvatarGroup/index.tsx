@@ -1,5 +1,6 @@
 import React, { ReactNode, CSSProperties } from "react";
 import Avatar from "../Avatar";
+import { RestAvatar } from "../Avatar/Avatar.styled";
 import { Group } from "./AvatarGroup.styled";
 
 interface IAvatarGroup {
@@ -10,6 +11,9 @@ interface IAvatarGroup {
   style?: CSSProperties;
   spacing?: "medium" | "small" | number;
 }
+
+// TODO: Refactor to a pure component.
+// TODO: Refactor the inline style.
 
 const Index = ({
   children,
@@ -25,18 +29,14 @@ const Index = ({
         <Avatar
           key={index}
           className={variant}
-          style={{ marginLeft: "-8px" }}
           //@ts-ignore
           {...child?.props}
         />
       ))}
-      <Avatar
-        variant={variant}
-        style={{ marginLeft: "-8px", backgroundColor: "#ccc" }}
-      >
+      <RestAvatar variant={variant}>
         {max && `${"+" + (total - (max - 1))}`}
         {total && !max && `${"+" + (total - children.length)}`}
-      </Avatar>
+      </RestAvatar>
     </Group>
   );
 };
