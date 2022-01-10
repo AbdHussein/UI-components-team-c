@@ -85,7 +85,7 @@ const SkeletonContent = () => {
     <>
       <div>
         {content.map((element, i) => (
-          <div key={element.id} id={element.id} ref={refs.current[i]}>
+          <div key={element.id} id={element.id} ref={refs.current[i]} style={{width: '93%'}}>
             {element.component}
           </div>
         ))}
