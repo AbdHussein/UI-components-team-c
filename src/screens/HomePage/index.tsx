@@ -33,9 +33,9 @@ export default function Index({
               <br /> always wanted
             </Heading>
             <Description>
-              MUI provides a robust, customizable, and accessible library of
-              foundational and advanced components, enabling you to build your
-              own design system and develop React applications faster.
+              C-Team UI provides a robust, customizable, and accessible library
+              of foundational and advanced components, enabling you to build
+              your own design system and develop React applications faster.
             </Description>
             <Button
               onClick={() => {

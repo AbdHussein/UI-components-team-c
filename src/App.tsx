@@ -44,7 +44,6 @@ function App() {
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
-        <Typography variant="h1">Hi</Typography>
       </ThemeProvider>
     </Suspense>
   );
